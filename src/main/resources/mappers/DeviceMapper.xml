@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="deviceMapper">
+
+	<select id="selectDeviceCnt" resultType="Integer">
+		select
+			COUNT(device_id)
+		from
+			tb_device
+		where
+			del_yn = 'N'
+	</select>
+
+	<select id="selectDeviceListPage" resultType="DeviceDto">
+		select
+			device_id as "deviceId"
+			, device_nm as "deviceNm"
+			, agree1
+			, agree2
+			, agree3
+			, agree4
+			, token
+			, create_dt as "createDt"
+			, (select count(idx) from tb_alarm_hist where device_id = a.device_id) as "alertCnt"
+		from
+			tb_device a
+		where
+			del_yn = 'N'
+		limit #{limitStartNo}, #{pageSize}
+  </select>
+  		
+  <select id="selectDeviceList" resultType="DeviceDto">
+	select
+		device_id as "deviceId"
+		, device_nm as "deviceNm"
+		, agree1
+		, agree2
+		, agree3
+		, agree4
+		, token
+	from
+		tb_device
+	where
+		del_yn = 'N'
+  </select>
+  
+  <select id="selectDevice" parameterType="String" resultType="DeviceDto">
+  	select
+		device_id as "deviceId"
+		, device_nm as "deviceNm"
+		, agree1
+		, agree2
+		, agree3
+		, agree4
+		, token
+	from
+		tb_device
+	where
+		device_id = #{deviceId}
+  
+  </select>
+  
+  <insert id="insertDevice" parameterType="DeviceDto">
+  	insert into tb_device (device_id, create_dt, create_by, del_yn, device_nm, agree1, agree2, agree3, agree4, token)
+  	values
+  	(
+  		#{deviceId}
+  		, now()
+  		, 'admin'
+  		, 'n'
+  		, #{deviceNm}
+  		, #{agree1}
+  		, #{agree2}
+  		, #{agree3}
+  		, #{agree4}
+  		, #{token}
+  	)
+  
+  </insert>
+  
+  <update id="updateDevice" parameterType="DeviceDto">
+  	update
+  		tb_device
+  	set
+  		agree1 = #{agree1}
+  		, agree2 = #{agree2}
+  		, agree3 = #{agree3}
+  		, agree4 = #{agree4}
+  		, token = #{token}
+  	where
+  		device_id = #{deviceId}
+  
+  </update>
+  
+  <update id="deleteDevice" parameterType="DeviceDto">
+  	update tb_device set del_yn = 'Y' where device_id = #{deviceId}
+  		
+  </update>
+
+</mapper>
