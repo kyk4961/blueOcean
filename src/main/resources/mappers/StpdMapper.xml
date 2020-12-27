@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="stpdMapper">
+	<insert id="insertStpd" parameterType="java.util.Map">
+	  	INSERT INTO `ship_thing_prsec_dtls`
+		(`FEE_GB`,
+		`OFFICE_GUBUN`,
+		`ACCT_DATE`,
+		`MANU_QTY`,
+		`MANUF_UNIT`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.FEE_GB},
+		#{item.OFFICE_GUBUN},
+		#{item.ACCT_DATE},
+		#{item.MANU_QTY},
+		#{item.MANUF_UNIT}
+		)
+		</foreach>
+	</insert>
+</mapper>

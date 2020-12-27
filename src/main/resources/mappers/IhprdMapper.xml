@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ihprdMapper">
+	<insert id="insertIhprd" parameterType="java.util.Map">
+	  	INSERT INTO `inner_harbor_psnship_rute_data`
+		(`CMPTNC_BROFFI_CODE`,
+		`RUTE_NM`,
+		`RUTE_SCTN_NO`,
+		`RUTE_SCTN_NM`,
+		`MAX_FLOOD_DIR`,
+		`MAX_FLOOD_RATE`,
+		`MIN_FLOOD_DIR`,
+		`MIN_FLOOD_RATE`,
+		`TIDE_PORTCL_NO`,
+		`TIDE_PORTCL_NM`,
+		`TIDE_SYNDC`,
+		`TIDE_FLQM`,
+		`TIDE_STRD_PORTCL`,
+		`TIDE_TIME_DIFF`,
+		`SAIL_VSL_NO`,
+		`SAIL_VSL_KND`,
+		`SAIL_VSL_CN`,
+		`NVGT_CHRT_PHOTO_NM`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.CMPTNC_BROFFI_CODE},
+		#{item.RUTE_NM},
+		#{item.RUTE_SCTN_NO},
+		#{item.RUTE_SCTN_NM},
+		#{item.MAX_FLOOD_DIR},
+		#{item.MAX_FLOOD_RATE},
+		#{item.MIN_FLOOD_DIR},
+		#{item.MIN_FLOOD_RATE},
+		#{item.TIDE_PORTCL_NO},
+		#{item.TIDE_PORTCL_NM},
+		#{item.TIDE_SYNDC},
+		#{item.TIDE_FLQM},
+		#{item.TIDE_STRD_PORTCL},
+		#{item.TIDE_TIME_DIFF},
+		#{item.SAIL_VSL_NO},
+		#{item.SAIL_VSL_KND},
+		#{item.SAIL_VSL_CN},
+		#{item.NVGT_CHRT_PHOTO_NM}
+		)
+		</foreach>
+	</insert>
+</mapper>

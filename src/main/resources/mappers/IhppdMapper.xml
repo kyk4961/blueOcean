@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ihppdMapper">
+	<insert id="insertIhppd" parameterType="java.util.Map">
+	  	INSERT INTO `inner_harbor_psnship_prt_data`
+		(`RUTE_NM`,
+		`PORTCL_NO`,
+		`PORTCL_NM`,
+		`PORTCL_BERTH_NO`,
+		`PORTCL_BERTH_PHOTO`,
+		`PORTCL_BERTH_KND`,
+		`BERTH_LT`,
+		`BERTH_BT`,
+		`BERTH_HG`,
+		`BERTH_HDG`,
+		`RESIDE_AT`,
+		`RESIDE_POPLTN_CO`,
+		`CNVNC_FCLTY_PHOTO`,
+		`CNVNC_FCLTY_KND`,
+		`CNVNC_FCLTY_NMPR_CO`,
+		`BKOFF_AT`,
+		`OP_DATE`,
+		`SLNETR_PSNSHP_NO`,
+		`SLNETR_PSNSHP_NM`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.RUTE_NM},
+		#{item.PORTCL_NO},
+		#{item.PORTCL_NM},
+		#{item.PORTCL_BERTH_NO},
+		#{item.PORTCL_BERTH_PHOTO},
+		#{item.PORTCL_BERTH_KND},
+		#{item.BERTH_LT},
+		#{item.BERTH_BT},
+		#{item.BERTH_HG},
+		#{item.BERTH_HDG},
+		#{item.RESIDE_AT},
+		#{item.RESIDE_POPLTN_CO},
+		#{item.CNVNC_FCLTY_PHOTO},
+		#{item.CNVNC_FCLTY_KND},
+		#{item.CNVNC_FCLTY_NMPR_CO},
+		#{item.BKOFF_AT},
+		#{item.OP_DATE},
+		#{item.SLNETR_PSNSHP_NO},
+		#{item.SLNETR_PSNSHP_NM}
+		)
+		</foreach>
+	</insert>
+</mapper>

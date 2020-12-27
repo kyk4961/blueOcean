@@ -29,6 +29,9 @@ dependencies {
 	
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.5.0'
 	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.5.0'
+	compile group: 'org.apache.poi', name: 'poi', version: '3.11'
+	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.11'
+	compile group: 'commons-io', name: 'commons-io', version: '2.4'
 	
 	compile 'org.mybatis:mybatis'
 	runtimeOnly 'mysql:mysql-connector-java'

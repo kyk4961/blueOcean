@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ihpndMapper">
+	<insert id="insertIhpnd" parameterType="java.util.Map">
+	  	INSERT INTO `inner_harbor_psnship_nvg_data`
+		(`CMPTNC_BROFFI_CODE`,
+		`RUTE_NM`,
+		`PSNSHP_NO`,
+		`PSNSHP_NM`,
+		`NVGT_ZONE_NM`,
+		`PSNSHP_GT`,
+		`PASNGR_PCAPA_CO`,
+		`LOADING_CREW_CO`,
+		`CAR_LOADNG_ABLTY_CO`,
+		`KDSHIP_NM`,
+		`SMR_NVG_CO`,
+		`WTR_NVG_CO`,
+		`VOYAGE_VE_NOTE`,
+		`RUTE_DSTNC`,
+		`REQRE_TIME`,
+		`MENGN_KW_OUTPT_PER_1SET`,
+		`MENGN_CO`,
+		`CNSTR_YEAR`,
+		`CNSTR_MONTH`,
+		`CNSTR_DAY`,
+		`SHPCPN_NM`,
+		`PSNSHP_PHOTO_NO`,
+		`PSNSHP_PHOTO_NM`,
+		`FRST_OPORT_PRT_NM`,
+		`MID_PORTCL_NO`,
+		`MID_PORTCL_NM`,
+		`MID_PORTCL_REQRE_TIME`,
+		`FNL_PORTCL_NM`,
+		`FNL_PORTCL_REQRE_TIME`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.CMPTNC_BROFFI_CODE},
+		#{item.RUTE_NM},
+		#{item.PSNSHP_NO},
+		#{item.PSNSHP_NM},
+		#{item.NVGT_ZONE_NM},
+		#{item.PSNSHP_GT},
+		#{item.PASNGR_PCAPA_CO},
+		#{item.LOADING_CREW_CO},
+		#{item.CAR_LOADNG_ABLTY_CO},
+		#{item.KDSHIP_NM},
+		#{item.SMR_NVG_CO},
+		#{item.WTR_NVG_CO},
+		#{item.VOYAGE_VE_NOTE},
+		#{item.RUTE_DSTNC},
+		#{item.REQRE_TIME},
+		#{item.MENGN_KW_OUTPT_PER_1SET},
+		#{item.MENGN_CO},
+		#{item.CNSTR_YEAR},
+		#{item.CNSTR_MONTH},
+		#{item.CNSTR_DAY},
+		#{item.SHPCPN_NM},
+		#{item.PSNSHP_PHOTO_NO},
+		#{item.PSNSHP_PHOTO_NM},
+		#{item.FRST_OPORT_PRT_NM},
+		#{item.MID_PORTCL_NO},
+		#{item.MID_PORTCL_NM},
+		#{item.MID_PORTCL_REQRE_TIME},
+		#{item.FNL_PORTCL_NM},
+		#{item.FNL_PORTCL_REQRE_TIME}
+		)
+		</foreach>
+	</insert>
+</mapper>

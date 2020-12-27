@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ihpifdMapper">
+	<insert id="insertIhpifd" parameterType="java.util.Map">
+	  	INSERT INTO `inner_harbor_psnship_injry_factor_data`
+		(`RUTE_NM`,
+		`RISK_FCTR_NO`,
+		`RISK_FCTR_KND_CODE`,
+		`RISK_FCTR_LAT`,
+		`RISK_FCTR_LONG`,
+		`RISK_FCTR_POSC_DTL`,
+		`RISK_FCTR_CN`,
+		`RISK_FCTR_PHOTO`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.RUTE_NM},
+		#{item.RISK_FCTR_NO},
+		#{item.RISK_FCTR_KND_CODE},
+		#{item.RISK_FCTR_LAT},
+		#{item.RISK_FCTR_LONG},
+		#{item.RISK_FCTR_POSC_DTL},
+		#{item.RISK_FCTR_CN},
+		#{item.RISK_FCTR_PHOTO}
+		)
+		</foreach>
+	</insert>
+</mapper>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ptfiMapper">
+	<insert id="insertPtfi" parameterType="java.util.Map">
+	  	INSERT INTO `prsec_trget_fshrbt_info`
+		(`SHIP_GUBUN`,
+		`GROSS_TONNAGE`,
+		`REG_LENGTH`,
+		`REG_BREADTH`,
+		`REG_DEPTH`,
+		`NATURE`,
+		`PURPOSE`,
+		`PURPOSE_GU`,
+		`REG_PORT`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.SHIP_GUBUN},
+		#{item.GROSS_TONNAGE},
+		#{item.REG_LENGTH},
+		#{item.REG_BREADTH},
+		#{item.REG_DEPTH},
+		#{item.NATURE},
+		#{item.PURPOSE},
+		#{item.PURPOSE_GU},
+		#{item.REG_PORT}
+		)
+		</foreach>
+	</insert>
+</mapper>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ihpmrwdMapper">
+	<insert id="insertIhpmrwd" parameterType="java.util.Map">
+	  	INSERT INTO `inner_harbor_psnship_mnby_nvg_cnrl_data`
+		(`YYYY`,
+		`MM`,
+		`PASNGR_SAFE_CNTER`,
+		`RUTE_NO`,
+		`RUTE_NM`,
+		`CTRL_TYPHOON`,
+		`CTRL_WDWV_WARN`,
+		`CTRL_WDWV_ADV`,
+		`CRTL_DTRT_WR`,
+		`CTRL_RSTC_VISIBIL`,
+		`CTRL_ETC`,
+		`NNAVI_ISPT`,
+		`NNAVI_IMPRMN`,
+		`NNAVI_ETC`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.YYYY},
+		#{item.MM},
+		#{item.PASNGR_SAFE_CNTER},
+		#{item.RUTE_NO},
+		#{item.RUTE_NM},
+		#{item.CTRL_TYPHOON},
+		#{item.CTRL_WDWV_WARN},
+		#{item.CTRL_WDWV_ADV},
+		#{item.CRTL_DTRT_WR},
+		#{item.CTRL_RSTC_VISIBIL},
+		#{item.CTRL_ETC},
+		#{item.NNAVI_ISPT},
+		#{item.NNAVI_IMPRMN},
+		#{item.NNAVI_ETC}
+		)
+		</foreach>
+	</insert>
+</mapper>

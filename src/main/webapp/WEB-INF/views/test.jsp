@@ -49,6 +49,26 @@
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left"></div>
                             </div>
+                            <div>
+                            <form action="/excel/upload" method="POST" enctype="multipart/form-data">
+                            	<select name="excelType">
+								    <option value="">옵션을 선택하세요.</option>
+								    <option value="fehd">어선 기관 마력 데이터</option>
+								    <option value="fmd">어선 측정 데이터</option>
+								    <option value="fprd">어선 검사 신청 내역</option>
+								    <option value="ihpifd">내항 여객선 항로 위해요소 데이터</option>
+								    <option value="ihpmncd">내항 여객선 월별 운항통제 데이터</option>
+								    <option value="ihpmrwd">내항 여객선 주요 항로 기상 데이터</option>
+								    <option value="ihpnd">내항 여객선 운항 데이터</option>
+								    <option value="ihppd">내항 여객선 기항지 데이터</option>
+								    <option value="ihprd">내항 여객선 항로 데이터</option>
+								    <option value="ptfi">검사 대상 어선 정보</option>
+								    <option value="stpd">선박 물건 검사 내역</option>
+								</select>
+						      	<input type="file" name="file">
+						      	<input type="submit" value="제출" />
+						    </form>
+                            </div>
                             <div class="block-content collapse in" style="height:500px">
                                 <div class="span12">
                                 	<table class="table table-hover">

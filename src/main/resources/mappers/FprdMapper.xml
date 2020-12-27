@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fprdMapper">
+	<insert id="insertFprd" parameterType="java.util.Map">
+	  	INSERT INTO `fshrbt_prsec_reqst_dtls`
+		(`ACCT_YEAR`,
+		`ACCT_NO`,
+		`ACCT_DATE`,
+		`SHIP_KIND`,
+		`OFFICE_GUBUN`,
+		`ACCT_GUBUN`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.ACCT_YEAR},
+		#{item.ACCT_NO},
+		#{item.ACCT_DATE},
+		#{item.SHIP_KIND},
+		#{item.OFFICE_GUBUN},
+		#{item.ACCT_GUBUN}
+		)
+		</foreach>
+	</insert>
+</mapper>

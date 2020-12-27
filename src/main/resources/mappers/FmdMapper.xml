@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fmdMapper">
+	<insert id="insertFmd" parameterType="java.util.Map">
+	  	INSERT INTO `fshrbt_mesure_data`
+		(`APPL_GUBUN`,
+		`REG_PORT`,
+		`SHIP_GUBUN`,
+		`NATURE`,
+		`SBUILDER_ADD`,
+		`LAUNCH_DATE`,
+		`GROSS_TONNAGE`,
+		`MEASURED_LEN`,
+		`MEASURED_BREAD`,
+		`MEASURED_DPTM`,
+		`MEASURED_DPTS`,
+		`MEASURED_CTR`,
+		`MEASURE_LEN`,
+		`TOT_BULK`,
+		`TOT_DN_BULK`,
+		`TOT_UP_BULK`,
+		`EXPT_TOT_BULK`)
+		VALUES
+		<foreach item="item" index="index" collection="list" separator=" , ">
+		(
+		#{item.APPL_GUBUN},
+		#{item.REG_PORT},
+		#{item.SHIP_GUBUN},
+		#{item.NATURE},
+		#{item.SBUILDER_ADD},
+		#{item.LAUNCH_DATE},
+		#{item.GROSS_TONNAGE},
+		#{item.MEASURED_LEN},
+		#{item.MEASURED_BREAD},
+		#{item.MEASURED_DPTM},
+		#{item.MEASURED_DPTS},
+		#{item.MEASURED_CTR},
+		#{item.MEASURE_LEN},
+		#{item.TOT_BULK},
+		#{item.TOT_DN_BULK},
+		#{item.TOT_UP_BULK},
+		#{item.EXPT_TOT_BULK}
+		)
+		</foreach>
+	</insert>
+</mapper>
