@@ -4,25 +4,25 @@ import lombok.Data;
 
 @Data
 public class IhppdDto{
-	/* 9_³»Ç×_¿©°´¼±_±âÇ×Áö_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String RUTE_NM; //Ç×·Î¸íÄª
-	private String PORTCL_NO; //±âÇ×Áö_¼ø¹ø
-	private String PORTCL_NM; //±âÇ×Áö¸í
-	private String PORTCL_BERTH_NO; //±âÇ×Áö_Á¢¾È½Ã¼³_¼ø¹ø
-	private String PORTCL_BERTH_PHOTO; //Á¢¾È½Ã¼³»çÁø
-	private String PORTCL_BERTH_KND; //Á¢¾È½Ã¼³±¸ºĞ
-	private int BERTH_LT; //Á¢¾È½Ã¼³±Ô¸ğ_±æÀÌ
-	private int BERTH_BT; //Á¢¾È½Ã¼³±Ô¸ğ_³Êºñ
-	private int BERTH_HG; //Á¢¾È½Ã¼³±Ô¸ğ_³ôÀÌ
-	private int BERTH_HDG; //Á¢¾È¼±¼ö¹æÀ§
-	private String RESIDE_AT; //°ÅÁÖ±¸ºĞ
-	private int RESIDE_POPLTN_CO; //°ÅÁÖÀÎ±¸
-	private String CNVNC_FCLTY_PHOTO; //ÆíÀÇ½Ã¼³_»çÁø_ÆÄÀÏ¸í
-	private String CNVNC_FCLTY_KND; //ÆíÀÇ½Ã¼³_±¸ºĞ
-	private int CNVNC_FCLTY_NMPR_CO; //ÆíÀÇ½Ã¼³_¼ö¿ëÀÎ¿ø
-	private String BKOFF_AT; //¸ÅÇ¥¼ÒÀ¯¹«
-	private String OP_DATE; //°³°üÀÏ
-	private String SLNETR_PSNSHP_NO; //±âÇ×_¿©°´¼±_¼ø¹ø
-	private String SLNETR_PSNSHP_NM; //±âÇ×_¿©°´¼±_¸íÄª
+	/* 9_ë‚´í•­_ì—¬ê°ì„ _ê¸°í•­ì§€_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String RUTE_NM; //í•­ë¡œëª…ì¹­
+	private String PORTCL_NO; //ê¸°í•­ì§€_ìˆœë²ˆ
+	private String PORTCL_NM; //ê¸°í•­ì§€ëª…
+	private String PORTCL_BERTH_NO; //ê¸°í•­ì§€_ì ‘ì•ˆì‹œì„¤_ìˆœë²ˆ
+	private String PORTCL_BERTH_PHOTO; //ì ‘ì•ˆì‹œì„¤ì‚¬ì§„
+	private String PORTCL_BERTH_KND; //ì ‘ì•ˆì‹œì„¤êµ¬ë¶„
+	private int BERTH_LT; //ì ‘ì•ˆì‹œì„¤ê·œëª¨_ê¸¸ì´
+	private int BERTH_BT; //ì ‘ì•ˆì‹œì„¤ê·œëª¨_ë„ˆë¹„
+	private int BERTH_HG; //ì ‘ì•ˆì‹œì„¤ê·œëª¨_ë†’ì´
+	private int BERTH_HDG; //ì ‘ì•ˆì„ ìˆ˜ë°©ìœ„
+	private String RESIDE_AT; //ê±°ì£¼êµ¬ë¶„
+	private int RESIDE_POPLTN_CO; //ê±°ì£¼ì¸êµ¬
+	private String CNVNC_FCLTY_PHOTO; //í¸ì˜ì‹œì„¤_ì‚¬ì§„_íŒŒì¼ëª…
+	private String CNVNC_FCLTY_KND; //í¸ì˜ì‹œì„¤_êµ¬ë¶„
+	private int CNVNC_FCLTY_NMPR_CO; //í¸ì˜ì‹œì„¤_ìˆ˜ìš©ì¸ì›
+	private String BKOFF_AT; //ë§¤í‘œì†Œìœ ë¬´
+	private String OP_DATE; //ê°œê´€ì¼
+	private String SLNETR_PSNSHP_NO; //ê¸°í•­_ì—¬ê°ì„ _ìˆœë²ˆ
+	private String SLNETR_PSNSHP_NM; //ê¸°í•­_ì—¬ê°ì„ _ëª…ì¹­
 }

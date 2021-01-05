@@ -4,12 +4,12 @@ import lombok.Data;
 
 @Data
 public class FprdDto{
-	/* 3_¾î¼±_°Ë»ç_½ÅÃ»_³»¿ª */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private int ACCT_YEAR; //Á¢¼ö³âµµ
-	private int ACCT_NO; //Á¢¼ö¹øÈ£
-	private String ACCT_DATE; //Á¢¼ö³¯Â¥
-	private String SHIP_KIND; //°Ë»çÁ¾·ù
-	private String OFFICE_GUBUN; //°Ë»çÁö»ç
-	private String ACCT_GUBUN; //Á¢¼ö¹æ¹ı
+	/* 3_ì–´ì„ _ê²€ì‚¬_ì‹ ì²­_ë‚´ì—­ */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private int ACCT_YEAR; //ì ‘ìˆ˜ë…„ë„
+	private int ACCT_NO; //ì ‘ìˆ˜ë²ˆí˜¸
+	private String ACCT_DATE; //ì ‘ìˆ˜ë‚ ì§œ
+	private String SHIP_KIND; //ê²€ì‚¬ì¢…ë¥˜
+	private String OFFICE_GUBUN; //ê²€ì‚¬ì§€ì‚¬
+	private String ACCT_GUBUN; //ì ‘ìˆ˜ë°©ë²•
 }

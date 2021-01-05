@@ -4,16 +4,16 @@ import lombok.Data;
 
 @Data
 public class IhpmrwdDto{
-	/* 11_³»Ç×_¿©°´¼±_ÁÖ¿ä_Ç×·Î_±â»ó_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String RUTE_NM; //Ç×·Î¸íÄª
-	private String WR_INFO_NO; //±â»óÁ¤º¸¼ø¹ø
-	private String WR_OBSV_TM; //½Ã°¢
-	private String WR_OBSV_LAT; //±â»ó_ÃøÁ¤_À§µµ
-	private String WR_OBSV_LONG; //±â»ó_ÃøÁ¤_°æµµ
-	private String WIND_DIR; //Ç³Çâ
-	private String WIND_SPD; //Ç³¼Ó
-	private String WVHGT; //ÆÄ°í
-	private String RST_WIND_SPD; //Ç³¼Ó_ÅëÁ¦±âÁØ
-	private String RST_WVHGT; //ÆÄ°í_ÅëÁ¦±âÁØ
+	/* 11_ë‚´í•­_ì—¬ê°ì„ _ì£¼ìš”_í•­ë¡œ_ê¸°ìƒ_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String RUTE_NM; //í•­ë¡œëª…ì¹­
+	private String WR_INFO_NO; //ê¸°ìƒì •ë³´ìˆœë²ˆ
+	private String WR_OBSV_TM; //ì‹œê°
+	private String WR_OBSV_LAT; //ê¸°ìƒ_ì¸¡ì •_ìœ„ë„
+	private String WR_OBSV_LONG; //ê¸°ìƒ_ì¸¡ì •_ê²½ë„
+	private String WIND_DIR; //í’í–¥
+	private String WIND_SPD; //í’ì†
+	private String WVHGT; //íŒŒê³ 
+	private String RST_WIND_SPD; //í’ì†_í†µì œê¸°ì¤€
+	private String RST_WVHGT; //íŒŒê³ _í†µì œê¸°ì¤€
 }

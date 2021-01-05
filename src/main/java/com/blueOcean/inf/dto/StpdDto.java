@@ -4,11 +4,11 @@ import lombok.Data;
 
 @Data
 public class StpdDto{
-	/* 2_¼±¹Ú_¹°°Ç_°Ë»ç_³»¿ª */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String FEE_GB; //Á¶È¸¸í
-	private String OFFICE_GUBUN; //°Ë»çÁö»ç
-	private String ACCT_DATE; //Á¢¼öÀÏÀÚ
-	private int MANU_QTY; //¼ö·®
-	private String MANUF_UNIT; //´ÜÀ§
+	/* 2_ì„ ë°•_ë¬¼ê±´_ê²€ì‚¬_ë‚´ì—­ */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String FEE_GB; //ì¡°íšŒëª…
+	private String OFFICE_GUBUN; //ê²€ì‚¬ì§€ì‚¬
+	private String ACCT_DATE; //ì ‘ìˆ˜ì¼ì
+	private int MANU_QTY; //ìˆ˜ëŸ‰
+	private String MANUF_UNIT; //ë‹¨ìœ„
 }

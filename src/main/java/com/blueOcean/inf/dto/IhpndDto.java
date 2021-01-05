@@ -4,35 +4,35 @@ import lombok.Data;
 
 @Data
 public class IhpndDto{
-	/* 6_³»Ç×_¿©°´¼±_¿îÇ×_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String CMPTNC_BROFFI_CODE; //°üÇÒÁö»ç_¸íÄª
-	private String RUTE_NM; //Ç×·Î¸íÄª
-	private String PSNSHP_NO; //¿îÇ×¿©°´¼±_¼ø¹ø
-	private String PSNSHP_NM; //¿îÇ×¿©°´¼±¸íÄª
-	private String NVGT_ZONE_NM; //Ç×ÇØ±¸¿ª
-	private int PSNSHP_GT; //ÃÑÅæ¼ö
-	private int PASNGR_PCAPA_CO; //¿©°´Á¤¿ø
-	private int LOADING_CREW_CO; //½Â¹«Á¤¿ø
-	private int CAR_LOADNG_ABLTY_CO; //Â÷·®ÀûÀç´ë¼ö
-	private String KDSHIP_NM; //¼±Á¾
-	private String SMR_NVG_CO; //ÇÏ°è_ÀÏÀÏ_¿îÇ×È½¼ö
-	private String WTR_NVG_CO; //µ¿°è_ÀÏÀÏ_¿îÇ×È½¼ö
-	private float VOYAGE_VE_NOTE; //¼Ó·Â(³ëÆ®)
-	private String RUTE_DSTNC; //¿îÇ×°Å¸®(¸¶ÀÏ)
-	private String REQRE_TIME; //¼Ò¿ä½Ã°£(ºĞ)
-	private String MENGN_KW_OUTPT_PER_1SET; //±â°ü_1°³´ç_ÃßÁø·Â
-	private int MENGN_CO; //±â°ü°³¼ö
-	private String CNSTR_YEAR; //¼±¹Ú_°ÇÁ¶_³â
-	private String CNSTR_MONTH; //¼±¹Ú_°ÇÁ¶_¿ù
-	private String CNSTR_DAY; //¼±¹Ú_°ÇÁ¶_ÀÏ
-	private String SHPCPN_NM; //¼±»ç¸í
-	private String PSNSHP_PHOTO_NO; //¿©°´¼±»çÁø_¼ø¹ø
-	private String PSNSHP_PHOTO_NM; //¿©°´¼±_»çÁø_ÆÄÀÏ¸í
-	private String FRST_OPORT_PRT_NM; //ÃÖÃÊÃâÇ×Áö_¸íÄª
-	private String MID_PORTCL_NO; //Áß°£±âÇ×Áö_¼ø¹ø
-	private String MID_PORTCL_NM; //Áß°£±âÇ×Áö_¸íÄª
-	private String MID_PORTCL_REQRE_TIME; //Áß°£±âÇ×Áö_¼Ò¿ä½Ã°£
-	private String FNL_PORTCL_NM; //Á¾Á¡Áö
-	private String FNL_PORTCL_REQRE_TIME; //Á¾Á¡Áö_¼Ò¿ä½Ã°£
+	/* 6_ë‚´í•­_ì—¬ê°ì„ _ìš´í•­_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String CMPTNC_BROFFI_CODE; //ê´€í• ì§€ì‚¬_ëª…ì¹­
+	private String RUTE_NM; //í•­ë¡œëª…ì¹­
+	private String PSNSHP_NO; //ìš´í•­ì—¬ê°ì„ _ìˆœë²ˆ
+	private String PSNSHP_NM; //ìš´í•­ì—¬ê°ì„ ëª…ì¹­
+	private String NVGT_ZONE_NM; //í•­í•´êµ¬ì—­
+	private int PSNSHP_GT; //ì´í†¤ìˆ˜
+	private int PASNGR_PCAPA_CO; //ì—¬ê°ì •ì›
+	private int LOADING_CREW_CO; //ìŠ¹ë¬´ì •ì›
+	private int CAR_LOADNG_ABLTY_CO; //ì°¨ëŸ‰ì ì¬ëŒ€ìˆ˜
+	private String KDSHIP_NM; //ì„ ì¢…
+	private String SMR_NVG_CO; //í•˜ê³„_ì¼ì¼_ìš´í•­íšŸìˆ˜
+	private String WTR_NVG_CO; //ë™ê³„_ì¼ì¼_ìš´í•­íšŸìˆ˜
+	private float VOYAGE_VE_NOTE; //ì†ë ¥(ë…¸íŠ¸)
+	private String RUTE_DSTNC; //ìš´í•­ê±°ë¦¬(ë§ˆì¼)
+	private String REQRE_TIME; //ì†Œìš”ì‹œê°„(ë¶„)
+	private String MENGN_KW_OUTPT_PER_1SET; //ê¸°ê´€_1ê°œë‹¹_ì¶”ì§„ë ¥
+	private int MENGN_CO; //ê¸°ê´€ê°œìˆ˜
+	private String CNSTR_YEAR; //ì„ ë°•_ê±´ì¡°_ë…„
+	private String CNSTR_MONTH; //ì„ ë°•_ê±´ì¡°_ì›”
+	private String CNSTR_DAY; //ì„ ë°•_ê±´ì¡°_ì¼
+	private String SHPCPN_NM; //ì„ ì‚¬ëª…
+	private String PSNSHP_PHOTO_NO; //ì—¬ê°ì„ ì‚¬ì§„_ìˆœë²ˆ
+	private String PSNSHP_PHOTO_NM; //ì—¬ê°ì„ _ì‚¬ì§„_íŒŒì¼ëª…
+	private String FRST_OPORT_PRT_NM; //ìµœì´ˆì¶œí•­ì§€_ëª…ì¹­
+	private String MID_PORTCL_NO; //ì¤‘ê°„ê¸°í•­ì§€_ìˆœë²ˆ
+	private String MID_PORTCL_NM; //ì¤‘ê°„ê¸°í•­ì§€_ëª…ì¹­
+	private String MID_PORTCL_REQRE_TIME; //ì¤‘ê°„ê¸°í•­ì§€_ì†Œìš”ì‹œê°„
+	private String FNL_PORTCL_NM; //ì¢…ì ì§€
+	private String FNL_PORTCL_REQRE_TIME; //ì¢…ì ì§€_ì†Œìš”ì‹œê°„
 }

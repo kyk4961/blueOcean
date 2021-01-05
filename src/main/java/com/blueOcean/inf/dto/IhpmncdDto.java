@@ -4,20 +4,20 @@ import lombok.Data;
 
 @Data
 public class IhpmncdDto {
-	/* 10_³»Ç×_¿©°´¼±_¿ùº°_¿îÇ×ÅëÁ¦_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String YYYY; //¿¬µµ
-	private String MM; //¿ù
-	private String PASNGR_SAFE_CNTER; //°üÇÒÁö»ç_¸íÄª
-	private String RUTE_NO; //Ç×·Î_¼ø¹ø
-	private String RUTE_NM; //Ç×·Î_¸íÄª
-	private int CTRL_TYPHOON; //ÅëÁ¦ÀÏ¼ö_ÅÂÇ³
-	private int CTRL_WDWV_WARN; //ÅëÁ¦ÀÏ¼ö_Ç³¶û°æº¸
-	private int CTRL_WDWV_ADV; //ÅëÁ¦ÀÏ¼ö_Ç³¶ûÁÖÀÇº¸
-	private int CRTL_DTRT_WR; //ÅëÁ¦ÀÏ¼ö_±â»ó¾ÇÈ­
-	private int CTRL_RSTC_VISIBIL; //ÅëÁ¦ÀÏ¼ö_¾È°³
-	private int CTRL_ETC; //ÅëÁ¦ÀÏ¼ö_±âÅ¸
-	private int NNAVI_ISPT; //ÈŞÇ×ÀÏ¼ö_¼±¹Ú°Ë»ç
-	private int NNAVI_IMPRMN; //ÈŞÇ×ÀÏ¼ö_¼±¹ÚÁ¤ºñ
-	private int NNAVI_ETC; //ÈŞÇ×ÀÏ¼ö_±âÅ¸
+	/* 10_ë‚´í•­_ì—¬ê°ì„ _ì›”ë³„_ìš´í•­í†µì œ_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String YYYY; //ì—°ë„
+	private String MM; //ì›”
+	private String PASNGR_SAFE_CNTER; //ê´€í• ì§€ì‚¬_ëª…ì¹­
+	private String RUTE_NO; //í•­ë¡œ_ìˆœë²ˆ
+	private String RUTE_NM; //í•­ë¡œ_ëª…ì¹­
+	private int CTRL_TYPHOON; //í†µì œì¼ìˆ˜_íƒœí’
+	private int CTRL_WDWV_WARN; //í†µì œì¼ìˆ˜_í’ë‘ê²½ë³´
+	private int CTRL_WDWV_ADV; //í†µì œì¼ìˆ˜_í’ë‘ì£¼ì˜ë³´
+	private int CRTL_DTRT_WR; //í†µì œì¼ìˆ˜_ê¸°ìƒì•…í™”
+	private int CTRL_RSTC_VISIBIL; //í†µì œì¼ìˆ˜_ì•ˆê°œ
+	private int CTRL_ETC; //í†µì œì¼ìˆ˜_ê¸°íƒ€
+	private int NNAVI_ISPT; //íœ´í•­ì¼ìˆ˜_ì„ ë°•ê²€ì‚¬
+	private int NNAVI_IMPRMN; //íœ´í•­ì¼ìˆ˜_ì„ ë°•ì •ë¹„
+	private int NNAVI_ETC; //íœ´í•­ì¼ìˆ˜_ê¸°íƒ€
 }

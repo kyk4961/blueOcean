@@ -4,23 +4,23 @@ import lombok.Data;
 
 @Data
 public class FmdDto{
-	/* 4_¾î¼±_ÃøÁ¤_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String APPL_GUBUN; //½ÅÃ»±¸ºĞ
-	private String REG_PORT; //¼±ÀûÇ×
-	private String SHIP_GUBUN; //¼±¹ÚÁ¾·ù
-	private String NATURE; //¼±Áú
-	private String SBUILDER_ADD; //Á¶¼±Áö
-	private String LAUNCH_DATE; //Áø¼öÀÏ
-	private float GROSS_TONNAGE; //ÃÑÅæ¼ö
+	/* 4_ì–´ì„ _ì¸¡ì •_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String APPL_GUBUN; //ì‹ ì²­êµ¬ë¶„
+	private String REG_PORT; //ì„ ì í•­
+	private String SHIP_GUBUN; //ì„ ë°•ì¢…ë¥˜
+	private String NATURE; //ì„ ì§ˆ
+	private String SBUILDER_ADD; //ì¡°ì„ ì§€
+	private String LAUNCH_DATE; //ì§„ìˆ˜ì¼
+	private float GROSS_TONNAGE; //ì´í†¤ìˆ˜
 	private float MEASURED_LEN; //Lt
 	private float MEASURED_BREAD; //Bt
 	private float MEASURED_DPTM; //Dm
 	private float MEASURED_DPTS; //Ds
 	private float MEASURED_CTR; //C
 	private float MEASURE_LEN; //LOA
-	private float TOT_BULK; //ÆóÀ§Àå¼ÒÀÇÇÕ°è¿ëÀû
-	private float TOT_DN_BULK; //»ó°©ÆÇ¾Æ·¡ÀÇ¿ëÀû
-	private float TOT_UP_BULK; //»ó°©ÆÇÀ§ÇÕ°è¿ëÀû
-	private float EXPT_TOT_BULK; //Á¦¿ÜÀå¼ÒÇÕ°è¿ëÀû
+	private float TOT_BULK; //íìœ„ì¥ì†Œì˜í•©ê³„ìš©ì 
+	private float TOT_DN_BULK; //ìƒê°‘íŒì•„ë˜ì˜ìš©ì 
+	private float TOT_UP_BULK; //ìƒê°‘íŒìœ„í•©ê³„ìš©ì 
+	private float EXPT_TOT_BULK; //ì œì™¸ì¥ì†Œí•©ê³„ìš©ì 
 }

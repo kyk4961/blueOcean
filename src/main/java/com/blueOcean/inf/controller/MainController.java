@@ -36,7 +36,7 @@ public class MainController {
 	@RequestMapping(value="/excel/upload", method = RequestMethod.POST)
 	public String excelUpload(Model model, @RequestParam("file") MultipartFile file, @RequestParam("excelType") String excelType) throws IOException {
 		excelService.importExcelData(file, excelType);
-		// TODO : import ÀÌÈÄ µ¿ÀÛ ¹× ¿¹¿ÜÃ³¸® ·ÎÁ÷ °³¹ß
+		// TODO : import ì´í›„ ë™ì‘ ë° ì˜ˆì™¸ì²˜ë¦¬ ë¡œì§ ê°œë°œ
 		return "test";
 	}
 }

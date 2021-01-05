@@ -4,14 +4,14 @@ import lombok.Data;
 
 @Data
 public class IhpifdDto{
-	/* 8_³»Ç×_¿©°´¼±_Ç×·Î_À§ÇØ¿ä¼Ò_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String RUTE_NM; //Ç×·Î¸íÄª
-	private String RISK_FCTR_NO; //À§ÇØ¿ä¼Ò_¼ø¹ø
-	private String RISK_FCTR_KND_CODE; //À§ÇØ¿ä¼Ò_Á¾·ù
-	private String RISK_FCTR_LAT; //À§ÇØ¿ä¼Ò_À§µµ
-	private String RISK_FCTR_LONG; //À§ÇØ¿ä¼Ò_°æµµ
-	private String RISK_FCTR_POSC_DTL; //À§ÇØ¿ä¼Ò_À§Ä¡_»ó¼¼
-	private String RISK_FCTR_CN; //À§ÇØ¿ä¼Ò_³»¿ë
-	private String RISK_FCTR_PHOTO; //À§ÇØ¿ä¼Ò_»çÁø_ÆÄÀÏ¸í
+	/* 8_ë‚´í•­_ì—¬ê°ì„ _í•­ë¡œ_ìœ„í•´ìš”ì†Œ_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String RUTE_NM; //í•­ë¡œëª…ì¹­
+	private String RISK_FCTR_NO; //ìœ„í•´ìš”ì†Œ_ìˆœë²ˆ
+	private String RISK_FCTR_KND_CODE; //ìœ„í•´ìš”ì†Œ_ì¢…ë¥˜
+	private String RISK_FCTR_LAT; //ìœ„í•´ìš”ì†Œ_ìœ„ë„
+	private String RISK_FCTR_LONG; //ìœ„í•´ìš”ì†Œ_ê²½ë„
+	private String RISK_FCTR_POSC_DTL; //ìœ„í•´ìš”ì†Œ_ìœ„ì¹˜_ìƒì„¸
+	private String RISK_FCTR_CN; //ìœ„í•´ìš”ì†Œ_ë‚´ìš©
+	private String RISK_FCTR_PHOTO; //ìœ„í•´ìš”ì†Œ_ì‚¬ì§„_íŒŒì¼ëª…
 }

@@ -4,15 +4,15 @@ import lombok.Data;
 
 @Data
 public class FehdDto{
-	/* 5_¾î¼±_±â°ü_¸¶·Â_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String MAIN_KIND; //ÁÖ±â°ü
-	private int MAIN_QTY; //ÁÖ±â°ü¼ö
-	private int MCE_KW; //±â°üÃâ·Â
-	private int MCE_PS; //±â°üÃâ·Â
-	private float GROSS_TONNAGE; //ÃÑÅæ¼ö
-	private String PURPOSE; //¼±¹Ú¿ëµµ
-	private String PURPOSE_GU; //¼±¹Ú¿ëµµ±¸ºĞ
-	private String NATURE; //¼±Ã¼ÀçÁúÄÚµå
-	private String LAUNCH_DATE; //Áø¼öÀÏÀÚ
+	/* 5_ì–´ì„ _ê¸°ê´€_ë§ˆë ¥_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String MAIN_KIND; //ì£¼ê¸°ê´€
+	private int MAIN_QTY; //ì£¼ê¸°ê´€ìˆ˜
+	private int MCE_KW; //ê¸°ê´€ì¶œë ¥
+	private int MCE_PS; //ê¸°ê´€ì¶œë ¥
+	private float GROSS_TONNAGE; //ì´í†¤ìˆ˜
+	private String PURPOSE; //ì„ ë°•ìš©ë„
+	private String PURPOSE_GU; //ì„ ë°•ìš©ë„êµ¬ë¶„
+	private String NATURE; //ì„ ì²´ì¬ì§ˆì½”ë“œ
+	private String LAUNCH_DATE; //ì§„ìˆ˜ì¼ì
 }

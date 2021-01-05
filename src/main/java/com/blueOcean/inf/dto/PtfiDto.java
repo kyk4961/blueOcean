@@ -4,16 +4,16 @@ import lombok.Data;
 
 @Data
 public class PtfiDto{
-	/* 1_°Ë»ç_´ë»ó_¾î¼±_Á¤º¸ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private int SHIP_NO; //¼±¹Ú¹øÈ£
-	private String SHIP_GUBUN; //±¸ºĞ(¾î¼±/ÀÏ¹İ¼±)
-	private float GROSS_TONNAGE; //ÃÑÅæ¼ö
-	private float REG_LENGTH; //±æÀÌ
-	private float REG_BREADTH; //³Êºñ
-	private float REG_DEPTH; //±íÀÌ
-	private float NATURE; //¼±Áú
-	private String PURPOSE; //¿ëµµ
-	private String PURPOSE_GU; //¼¼ºÎ¿ëµµ
-	private String REG_PORT; //¼±ÀûÇ×
+	/* 1_ê²€ì‚¬_ëŒ€ìƒ_ì–´ì„ _ì •ë³´ */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private int SHIP_NO; //ì„ ë°•ë²ˆí˜¸
+	private String SHIP_GUBUN; //êµ¬ë¶„(ì–´ì„ /ì¼ë°˜ì„ )
+	private float GROSS_TONNAGE; //ì´í†¤ìˆ˜
+	private float REG_LENGTH; //ê¸¸ì´
+	private float REG_BREADTH; //ë„ˆë¹„
+	private float REG_DEPTH; //ê¹Šì´
+	private float NATURE; //ì„ ì§ˆ
+	private String PURPOSE; //ìš©ë„
+	private String PURPOSE_GU; //ì„¸ë¶€ìš©ë„
+	private String REG_PORT; //ì„ ì í•­
 }

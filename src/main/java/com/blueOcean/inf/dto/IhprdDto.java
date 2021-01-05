@@ -4,24 +4,24 @@ import lombok.Data;
 
 @Data
 public class IhprdDto{
-	/* 7_³»Ç×_¿©°´¼±_Ç×·Î_µ¥ÀÌÅÍ */
-	private int IDX; //ÀÏ·Ã¹øÈ£
-	private String CMPTNC_BROFFI_CODE; //°üÇÒÁö»ç_¸íÄª
-	private String RUTE_NM; //Ç×·Î¸íÄª
-	private String RUTE_SCTN_NO; //Ç×·Î±¸°£_¼ø¹ø
-	private String RUTE_SCTN_NM; //Ç×·Î±¸°£¸í
-	private String MAX_FLOOD_DIR; //Á¶·ù_ÃÖ°­Ã¢Á¶·ù(À¯Ç×)
-	private String MAX_FLOOD_RATE; //Á¶·ù_ÃÖ°­Ã¢Á¶·ù(À¯¼Ó)
-	private String MIN_FLOOD_DIR; //Á¶·ù_ÃÖ°­³«Á¶·ù(À¯Ç×)
-	private String MIN_FLOOD_RATE; //Á¶·ù_ÃÖ°­³«Á¶·ù(À¯¼Ó)
-	private String TIDE_PORTCL_NO; //Á¶¼®_±âÇ×Áö_¼ø¹ø
-	private String TIDE_PORTCL_NM; //Á¶¼®_±âÇ×Áö_¸íÄª
-	private String TIDE_SYNDC; //Á¶¼®_»è¸Á
-	private String TIDE_FLQM; //Á¶¼®_¾çÇö
-	private String TIDE_STRD_PORTCL; //Á¶¼®_Æò±ÕÇ×
-	private String TIDE_TIME_DIFF; //Á¶¼®_Á¶½ÃÂ÷
-	private String SAIL_VSL_NO; //ÁÖ¿äÅëÇ×¼±¹Ú_¼ø¹ø
-	private String SAIL_VSL_KND; //ÁÖ¿äÅëÇ×¼±¹Ú_À¯Çü
-	private String SAIL_VSL_CN; //ÁÖ¿äÅëÇ×¼±¹Ú_³»¿ë
-	private String NVGT_CHRT_PHOTO_NM; //Ç×·Îµµ_»çÁø_ÆÄÀÏ¸í
+	/* 7_ë‚´í•­_ì—¬ê°ì„ _í•­ë¡œ_ë°ì´í„° */
+	private int IDX; //ì¼ë ¨ë²ˆí˜¸
+	private String CMPTNC_BROFFI_CODE; //ê´€í• ì§€ì‚¬_ëª…ì¹­
+	private String RUTE_NM; //í•­ë¡œëª…ì¹­
+	private String RUTE_SCTN_NO; //í•­ë¡œêµ¬ê°„_ìˆœë²ˆ
+	private String RUTE_SCTN_NM; //í•­ë¡œêµ¬ê°„ëª…
+	private String MAX_FLOOD_DIR; //ì¡°ë¥˜_ìµœê°•ì°½ì¡°ë¥˜(ìœ í•­)
+	private String MAX_FLOOD_RATE; //ì¡°ë¥˜_ìµœê°•ì°½ì¡°ë¥˜(ìœ ì†)
+	private String MIN_FLOOD_DIR; //ì¡°ë¥˜_ìµœê°•ë‚™ì¡°ë¥˜(ìœ í•­)
+	private String MIN_FLOOD_RATE; //ì¡°ë¥˜_ìµœê°•ë‚™ì¡°ë¥˜(ìœ ì†)
+	private String TIDE_PORTCL_NO; //ì¡°ì„_ê¸°í•­ì§€_ìˆœë²ˆ
+	private String TIDE_PORTCL_NM; //ì¡°ì„_ê¸°í•­ì§€_ëª…ì¹­
+	private String TIDE_SYNDC; //ì¡°ì„_ì‚­ë§
+	private String TIDE_FLQM; //ì¡°ì„_ì–‘í˜„
+	private String TIDE_STRD_PORTCL; //ì¡°ì„_í‰ê· í•­
+	private String TIDE_TIME_DIFF; //ì¡°ì„_ì¡°ì‹œì°¨
+	private String SAIL_VSL_NO; //ì£¼ìš”í†µí•­ì„ ë°•_ìˆœë²ˆ
+	private String SAIL_VSL_KND; //ì£¼ìš”í†µí•­ì„ ë°•_ìœ í˜•
+	private String SAIL_VSL_CN; //ì£¼ìš”í†µí•­ì„ ë°•_ë‚´ìš©
+	private String NVGT_CHRT_PHOTO_NM; //í•­ë¡œë„_ì‚¬ì§„_íŒŒì¼ëª…
 }
