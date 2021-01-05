@@ -4,7 +4,7 @@
 
 <mapper namespace="fehdMapper">
 	<insert id="insertFehd" parameterType="java.util.Map">
-	  	INSERT INTO `fshrbt_engn_hrspw_data`
+		INSERT INTO `fshrbt_engn_hrspw_data`
 		(`MAIN_KIND`,
 		`MAIN_QTY`,
 		`MCE_KW`,
@@ -15,18 +15,47 @@
 		`NATURE`,
 		`LAUNCH_DATE`)
 		VALUES
-		<foreach item="item" index="index" collection="list" separator=" , ">
-		(
-		#{item.MAIN_KIND},
-		#{item.MAIN_QTY},
-		#{item.MCE_KW},
-		#{item.MCE_PS},
-		#{item.GROSS_TONNAGE},
-		#{item.PURPOSE},
-		#{item.PURPOSE_GU},
-		#{item.NATURE},
-		#{item.LAUNCH_DATE}
-		)
+		<foreach item="item" index="index" collection="list"
+			separator=" , ">
+			(
+			#{item.MAIN_KIND},
+			#{item.MAIN_QTY},
+			#{item.MCE_KW},
+			#{item.MCE_PS},
+			#{item.GROSS_TONNAGE},
+			#{item.PURPOSE},
+			#{item.PURPOSE_GU},
+			#{item.NATURE},
+			#{item.LAUNCH_DATE}
+			)
 		</foreach>
 	</insert>
+
+	<select id="selectFehdCnt" resultType="Integer">
+	<![CDATA[
+		SELECT
+			COUNT(IDX)
+      	FROM
+        	`fshrbt_engn_hrspw_data`
+	]]>
+	</select>
+
+	<select id="selectFehdListPage" resultType="FehdDto" parameterType="PagingDto">
+  	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `MAIN_KIND`,
+		    `MAIN_QTY`,
+		    `MCE_KW`,
+		    `MCE_PS`,
+		    `GROSS_TONNAGE`,
+		    `PURPOSE`,
+		    `PURPOSE_GU`,
+		    `NATURE`,
+		    `LAUNCH_DATE`
+		FROM
+			`fshrbt_engn_hrspw_data`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]>
+	</select>
 </mapper>

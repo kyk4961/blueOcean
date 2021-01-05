@@ -21,4 +21,28 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectStpdCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+      		`ship_thing_prsec_dtls`
+	]]>
+  	</select>
+
+	<select id="selectStpdListPage" resultType="StpdDto" parameterType="PagingDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `FEE_GB`,
+		    `OFFICE_GUBUN`,
+		    `ACCT_DATE`,
+		    `MANU_QTY`,
+		    `MANUF_UNIT`
+		FROM
+			`ship_thing_prsec_dtls`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

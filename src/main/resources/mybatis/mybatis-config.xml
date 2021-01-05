@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	
+	<typeAliases>
+		<typeAlias alias="FehdDto" type="com.blueOcean.inf.dto.FehdDto" />
+		<typeAlias alias="FmdDto" type="com.blueOcean.inf.dto.FmdDto" />
+		<typeAlias alias="FprdDto" type="com.blueOcean.inf.dto.FprdDto" />
+		<typeAlias alias="IhpifdDto" type="com.blueOcean.inf.dto.IhpifdDto" />
+		<typeAlias alias="IhpmncdDto" type="com.blueOcean.inf.dto.IhpmncdDto" />
+		<typeAlias alias="IhpmrwdDto" type="com.blueOcean.inf.dto.IhpmrwdDto" />
+		<typeAlias alias="IhpndDto" type="com.blueOcean.inf.dto.IhpndDto" />
+		<typeAlias alias="IhppdDto" type="com.blueOcean.inf.dto.IhppdDto" />
+		<typeAlias alias="IhprdDto" type="com.blueOcean.inf.dto.IhprdDto" />
+		<typeAlias alias="PtfiDto" type="com.blueOcean.inf.dto.PtfiDto" />
+		<typeAlias alias="StpdDto" type="com.blueOcean.inf.dto.StpdDto" />
+		<typeAlias alias="PagingDto" type="com.blueOcean.inf.dto.PagingDto" />
+	</typeAliases>
 </configuration>

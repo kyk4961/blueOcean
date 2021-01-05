@@ -47,4 +47,41 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectIhprdCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+      		`inner_harbor_psnship_rute_data`
+	]]>
+  	</select>
+
+	<select id="selectIhprdListPage" resultType="IhprdDto" parameterType="PagingDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `CMPTNC_BROFFI_CODE`,
+		    `RUTE_NM`,
+		    `RUTE_SCTN_NO`,
+		    `RUTE_SCTN_NM`,
+		    `MAX_FLOOD_DIR`,
+		    `MAX_FLOOD_RATE`,
+		    `MIN_FLOOD_DIR`,
+		    `MIN_FLOOD_RATE`,
+		    `TIDE_PORTCL_NO`,
+		    `TIDE_PORTCL_NM`,
+		    `TIDE_SYNDC`,
+		    `TIDE_FLQM`,
+		    `TIDE_STRD_PORTCL`,
+		    `TIDE_TIME_DIFF`,
+		    `SAIL_VSL_NO`,
+		    `SAIL_VSL_KND`,
+		    `SAIL_VSL_CN`,
+		    `NVGT_CHRT_PHOTO_NM`
+		FROM
+			`inner_harbor_psnship_rute_data`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

@@ -69,4 +69,52 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectIhpndCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+        	`inner_harbor_psnship_nvg_data`
+	]]>
+  	</select>
+
+	<select id="selectIhpndListPage" resultType="IhpndDto" parameterType="PagingDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `CMPTNC_BROFFI_CODE`,
+		    `RUTE_NM`,
+		    `PSNSHP_NO`,
+		    `PSNSHP_NM`,
+		    `NVGT_ZONE_NM`,
+		    `PSNSHP_GT`,
+		    `PASNGR_PCAPA_CO`,
+		    `LOADING_CREW_CO`,
+		    `CAR_LOADNG_ABLTY_CO`,
+		    `KDSHIP_NM`,
+		    `SMR_NVG_CO`,
+		    `WTR_NVG_CO`,
+		    `VOYAGE_VE_NOTE`,
+		    `RUTE_DSTNC`,
+		    `REQRE_TIME`,
+		    `MENGN_KW_OUTPT_PER_1SET`,
+		    `MENGN_CO`,
+		    `CNSTR_YEAR`,
+		    `CNSTR_MONTH`,
+		    `CNSTR_DAY`,
+		    `SHPCPN_NM`,
+		    `PSNSHP_PHOTO_NO`,
+		    `PSNSHP_PHOTO_NM`,
+		    `FRST_OPORT_PRT_NM`,
+		    `MID_PORTCL_NO`,
+		    `MID_PORTCL_NM`,
+		    `MID_PORTCL_REQRE_TIME`,
+		    `FNL_PORTCL_NM`,
+		    `FNL_PORTCL_REQRE_TIME`
+		FROM
+			`inner_harbor_psnship_nvg_data`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

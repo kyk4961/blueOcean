@@ -29,4 +29,32 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectPtfiCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+      		`prsec_trget_fshrbt_info`
+	]]>
+  	</select>
+
+	<select id="selectPtfiListPage" resultType="PtfiDto" parameterType="PagingDto">
+	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `SHIP_GUBUN`,
+		    `GROSS_TONNAGE`,
+		    `REG_LENGTH`,
+		    `REG_BREADTH`,
+		    `REG_DEPTH`,
+		    `NATURE`,
+		    `PURPOSE`,
+		    `PURPOSE_GU`,
+		    `REG_PORT`
+		FROM
+			`prsec_trget_fshrbt_info`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

@@ -16,12 +16,12 @@ public class IhpndDto{
 	private int LOADING_CREW_CO; //승무정원
 	private int CAR_LOADNG_ABLTY_CO; //차량적재대수
 	private String KDSHIP_NM; //선종
-	private int SMR_NVG_CO; //하계_일일_운항횟수
-	private int WTR_NVG_CO; //동계_일일_운항횟수
-	private int VOYAGE_VE_NOTE; //속력(노트)
-	private int RUTE_DSTNC; //운항거리(마일)
-	private int REQRE_TIME; //소요시간(분)
-	private int MENGN_KW_OUTPT_PER_1SET; //기관_1개당_추진력
+	private String SMR_NVG_CO; //하계_일일_운항횟수
+	private String WTR_NVG_CO; //동계_일일_운항횟수
+	private float VOYAGE_VE_NOTE; //속력(노트)
+	private String RUTE_DSTNC; //운항거리(마일)
+	private String REQRE_TIME; //소요시간(분)
+	private String MENGN_KW_OUTPT_PER_1SET; //기관_1개당_추진력
 	private int MENGN_CO; //기관개수
 	private String CNSTR_YEAR; //선박_건조_년
 	private String CNSTR_MONTH; //선박_건조_월
@@ -32,7 +32,7 @@ public class IhpndDto{
 	private String FRST_OPORT_PRT_NM; //최초출항지_명칭
 	private String MID_PORTCL_NO; //중간기항지_순번
 	private String MID_PORTCL_NM; //중간기항지_명칭
-	private int MID_PORTCL_REQRE_TIME; //중간기항지_소요시간
+	private String MID_PORTCL_REQRE_TIME; //중간기항지_소요시간
 	private String FNL_PORTCL_NM; //종점지
-	private int FNL_PORTCL_REQRE_TIME; //종점지_소요시간
+	private String FNL_PORTCL_REQRE_TIME; //종점지_소요시간
 }

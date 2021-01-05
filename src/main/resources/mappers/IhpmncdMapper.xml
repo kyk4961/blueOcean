@@ -4,31 +4,72 @@
 
 <mapper namespace="ihpmncdMapper">
 	<insert id="insertIhpmncd" parameterType="java.util.Map">
-	  	INSERT INTO `inner_harbor_psnship_main_rute_wether_data`
-		(`RUTE_NM`,
-		`WR_INFO_NO`,
-		`WR_OBSV_TM`,
-		`WR_OBSV_LAT`,
-		`WR_OBSV_LONG`,
-		`WIND_DIR`,
-		`WIND_SPD`,
-		`WVHGT`,
-		`RST_WIND_SPD`,
-		`RST_WVHGT`)
+	  	INSERT INTO `inner_harbor_psnship_mnby_nvg_cnrl_data`
+		(`YYYY`,
+		`MM`,
+		`PASNGR_SAFE_CNTER`,
+		`RUTE_NO`,
+		`RUTE_NM`,
+		`CTRL_TYPHOON`,
+		`CTRL_WDWV_WARN`,
+		`CTRL_WDWV_ADV`,
+		`CRTL_DTRT_WR`,
+		`CTRL_RSTC_VISIBIL`,
+		`CTRL_ETC`,
+		`NNAVI_ISPT`,
+		`NNAVI_IMPRMN`,
+		`NNAVI_ETC`)
 		VALUES
 		<foreach item="item" index="index" collection="list" separator=" , ">
 		(
+		#{item.YYYY},
+		#{item.MM},
+		#{item.PASNGR_SAFE_CNTER},
+		#{item.RUTE_NO},
 		#{item.RUTE_NM},
-		#{item.WR_INFO_NO},
-		#{item.WR_OBSV_TM},
-		#{item.WR_OBSV_LAT},
-		#{item.WR_OBSV_LONG},
-		#{item.WIND_DIR},
-		#{item.WIND_SPD},
-		#{item.WVHGT},
-		#{item.RST_WIND_SPD},
-		#{item.RST_WVHGT}
+		#{item.CTRL_TYPHOON},
+		#{item.CTRL_WDWV_WARN},
+		#{item.CTRL_WDWV_ADV},
+		#{item.CRTL_DTRT_WR},
+		#{item.CTRL_RSTC_VISIBIL},
+		#{item.CTRL_ETC},
+		#{item.NNAVI_ISPT},
+		#{item.NNAVI_IMPRMN},
+		#{item.NNAVI_ETC}
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectIhpmncdCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+        	`inner_harbor_psnship_mnby_nvg_cnrl_data`
+	]]>
+  	</select>
+
+	<select id="selectIhpmncdListPage" resultType="IhpmncdDto" parameterType="PagingDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `YYYY`,
+		    `MM`,
+		    `PASNGR_SAFE_CNTER`,
+		    `RUTE_NO`,
+		    `RUTE_NM`,
+		    `CTRL_TYPHOON`,
+		    `CTRL_WDWV_WARN`,
+		    `CTRL_WDWV_ADV`,
+		    `CRTL_DTRT_WR`,
+		    `CTRL_RSTC_VISIBIL`,
+		    `CTRL_ETC`,
+		    `NNAVI_ISPT`,
+		    `NNAVI_IMPRMN`,
+		    `NNAVI_ETC`
+		FROM
+			`inner_harbor_psnship_mnby_nvg_cnrl_data`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

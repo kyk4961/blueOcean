@@ -27,4 +27,31 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectIhpifdCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+        	`inner_harbor_psnship_injry_factor_data`
+	]]>
+  	</select>
+
+	<select id="selectIhpifdListPage" resultType="IhpifdDto" parameterType="PagingDto">
+  	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `RUTE_NM`,
+		    `RISK_FCTR_NO`,
+		    `RISK_FCTR_KND_CODE`,
+		    `RISK_FCTR_LAT`,
+		    `RISK_FCTR_LONG`,
+		    `RISK_FCTR_POSC_DTL`,
+		    `RISK_FCTR_CN`,
+		    `RISK_FCTR_PHOTO`
+		FROM 
+			`inner_harbor_psnship_injry_factor_data`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

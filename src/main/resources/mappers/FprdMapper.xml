@@ -23,4 +23,29 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectFprdCnt" resultType="Integer">
+	<![CDATA[
+	  	SELECT
+			COUNT(IDX)
+      	FROM
+        	`fshrbt_prsec_reqst_dtls`
+	]]>
+  	</select>
+
+	<select id="selectFprdListPage" resultType="FprdDto" parameterType="PagingDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `ACCT_YEAR`,
+		    `ACCT_NO`,
+		    `ACCT_DATE`,
+		    `SHIP_KIND`,
+		    `OFFICE_GUBUN`,
+		    `ACCT_GUBUN`
+		FROM 
+			`fshrbt_prsec_reqst_dtls`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>

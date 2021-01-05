@@ -18,6 +18,12 @@
         </div>
     </div>
 </div>
+<style type="text/css">
+.table th {
+    text-align: center;
+    vertical-align: middle !important;
+}
+</style>
 <script>
 	function fn_logout() {
 		$.ajax({

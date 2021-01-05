@@ -45,4 +45,40 @@
 		)
 		</foreach>
 	</insert>
+	
+	<select id="selectFmdCnt" resultType="Integer">
+	<![CDATA[
+		SELECT
+			COUNT(IDX)
+      	FROM
+        	`fshrbt_mesure_data`
+	]]>
+  	</select>
+
+	<select id="selectFmdListPage" resultType="FmdDto" parameterType="PagingDto">
+  	<![CDATA[
+		SELECT
+			`IDX`,
+		    `APPL_GUBUN`,
+		    `REG_PORT`,
+		    `SHIP_GUBUN`,
+		    `NATURE`,
+		    `SBUILDER_ADD`,
+		    `LAUNCH_DATE`,
+		    `GROSS_TONNAGE`,
+		    `MEASURED_LEN`,
+		    `MEASURED_BREAD`,
+		    `MEASURED_DPTM`,
+		    `MEASURED_DPTS`,
+		    `MEASURED_CTR`,
+		    `MEASURE_LEN`,
+		    `TOT_BULK`,
+		    `TOT_DN_BULK`,
+		    `TOT_UP_BULK`,
+		    `EXPT_TOT_BULK`
+		FROM
+			`fshrbt_mesure_data`
+		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
 </mapper>
