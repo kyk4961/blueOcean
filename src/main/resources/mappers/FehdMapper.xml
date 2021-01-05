@@ -4,7 +4,7 @@
 
 <mapper namespace="fehdMapper">
 	<insert id="insertFehd" parameterType="java.util.Map">
-		INSERT INTO `fshrbt_engn_hrspw_data`
+		INSERT INTO `FSHRBT_ENGN_HRSPW_DATA`
 		(`MAIN_KIND`,
 		`MAIN_QTY`,
 		`MCE_KW`,
@@ -36,7 +36,7 @@
 		SELECT
 			COUNT(IDX)
       	FROM
-        	`fshrbt_engn_hrspw_data`
+        	`FSHRBT_ENGN_HRSPW_DATA`
 	]]>
 	</select>
 
@@ -54,7 +54,7 @@
 		    `NATURE`,
 		    `LAUNCH_DATE`
 		FROM
-			`fshrbt_engn_hrspw_data`
+			`FSHRBT_ENGN_HRSPW_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]>
 	</select>

@@ -4,7 +4,7 @@
 
 <mapper namespace="ihpndMapper">
 	<insert id="insertIhpnd" parameterType="java.util.Map">
-	  	INSERT INTO `inner_harbor_psnship_nvg_data`
+	  	INSERT INTO `INNER_HARBOR_PSNSHIP_NVG_DATA`
 		(`CMPTNC_BROFFI_CODE`,
 		`RUTE_NM`,
 		`PSNSHP_NO`,
@@ -75,7 +75,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-        	`inner_harbor_psnship_nvg_data`
+        	`INNER_HARBOR_PSNSHIP_NVG_DATA`
 	]]>
   	</select>
 
@@ -113,7 +113,7 @@
 		    `FNL_PORTCL_NM`,
 		    `FNL_PORTCL_REQRE_TIME`
 		FROM
-			`inner_harbor_psnship_nvg_data`
+			`INNER_HARBOR_PSNSHIP_NVG_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

@@ -2,6 +2,8 @@ package com.blueOcean.inf.controller;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,25 +20,15 @@ public class MainController {
 	@Autowired
 	private ExcelService excelService;
 	
-	@RequestMapping(value="/test")
-	public String test() throws Exception {
-		return "test";
-	}
-	
-	@RequestMapping(value="/main")
-	public String main() throws Exception {
-		return "main";
-	}
-	
-	@RequestMapping(value="/login")
-	public String fcm() throws Exception {
-		return "login";
+	@RequestMapping(value="/")
+	public String main(HttpServletRequest request) throws Exception {
+		return "redirect:/ptfiList";
 	}
 	
 	@RequestMapping(value="/excel/upload", method = RequestMethod.POST)
-	public String excelUpload(Model model, @RequestParam("file") MultipartFile file, @RequestParam("excelType") String excelType) throws IOException {
+	public String excelUpload(HttpServletRequest request, @RequestParam("file") MultipartFile file, @RequestParam("excelType") String excelType) throws IOException {
 		excelService.importExcelData(file, excelType);
-		// TODO : import 이후 동작 및 예외처리 로직 개발
-		return "test";
+		String referer = request.getHeader("referer");
+		return "redirect:" + referer;
 	}
 }

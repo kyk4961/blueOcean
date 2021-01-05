@@ -4,7 +4,7 @@
 
 <mapper namespace="stpdMapper">
 	<insert id="insertStpd" parameterType="java.util.Map">
-	  	INSERT INTO `ship_thing_prsec_dtls`
+	  	INSERT INTO `SHIP_THING_PRSEC_DTLS`
 		(`FEE_GB`,
 		`OFFICE_GUBUN`,
 		`ACCT_DATE`,
@@ -27,7 +27,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-      		`ship_thing_prsec_dtls`
+      		`SHIP_THING_PRSEC_DTLS`
 	]]>
   	</select>
 
@@ -41,7 +41,7 @@
 		    `MANU_QTY`,
 		    `MANUF_UNIT`
 		FROM
-			`ship_thing_prsec_dtls`
+			`SHIP_THING_PRSEC_DTLS`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

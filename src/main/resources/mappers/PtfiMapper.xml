@@ -4,7 +4,7 @@
 
 <mapper namespace="ptfiMapper">
 	<insert id="insertPtfi" parameterType="java.util.Map">
-	  	INSERT INTO `prsec_trget_fshrbt_info`
+	  	INSERT INTO `PRSEC_TRGET_FSHRBT_INFO`
 		(`SHIP_GUBUN`,
 		`GROSS_TONNAGE`,
 		`REG_LENGTH`,
@@ -35,7 +35,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-      		`prsec_trget_fshrbt_info`
+      		`PRSEC_TRGET_FSHRBT_INFO`
 	]]>
   	</select>
 
@@ -53,7 +53,7 @@
 		    `PURPOSE_GU`,
 		    `REG_PORT`
 		FROM
-			`prsec_trget_fshrbt_info`
+			`PRSEC_TRGET_FSHRBT_INFO`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

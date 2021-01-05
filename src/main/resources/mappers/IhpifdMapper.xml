@@ -4,7 +4,7 @@
 
 <mapper namespace="ihpifdMapper">
 	<insert id="insertIhpifd" parameterType="java.util.Map">
-	  	INSERT INTO `inner_harbor_psnship_injry_factor_data`
+	  	INSERT INTO `INNER_HARBOR_PSNSHIP_INJRY_FACTOR_DATA`
 		(`RUTE_NM`,
 		`RISK_FCTR_NO`,
 		`RISK_FCTR_KND_CODE`,
@@ -33,7 +33,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-        	`inner_harbor_psnship_injry_factor_data`
+        	`INNER_HARBOR_PSNSHIP_INJRY_FACTOR_DATA`
 	]]>
   	</select>
 
@@ -50,7 +50,7 @@
 		    `RISK_FCTR_CN`,
 		    `RISK_FCTR_PHOTO`
 		FROM 
-			`inner_harbor_psnship_injry_factor_data`
+			`INNER_HARBOR_PSNSHIP_INJRY_FACTOR_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

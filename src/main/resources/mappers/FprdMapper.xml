@@ -4,7 +4,7 @@
 
 <mapper namespace="fprdMapper">
 	<insert id="insertFprd" parameterType="java.util.Map">
-	  	INSERT INTO `fshrbt_prsec_reqst_dtls`
+	  	INSERT INTO `FSHRBT_PRSEC_REQST_DTLS`
 		(`ACCT_YEAR`,
 		`ACCT_NO`,
 		`ACCT_DATE`,
@@ -29,7 +29,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-        	`fshrbt_prsec_reqst_dtls`
+        	`FSHRBT_PRSEC_REQST_DTLS`
 	]]>
   	</select>
 
@@ -44,7 +44,7 @@
 		    `OFFICE_GUBUN`,
 		    `ACCT_GUBUN`
 		FROM 
-			`fshrbt_prsec_reqst_dtls`
+			`FSHRBT_PRSEC_REQST_DTLS`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

@@ -6,15 +6,49 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">관리자사이트</a>
+            <a class="brand" href="#"></a>
             <div class="nav-collapse collapse">
-                <ul class="nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" role="button" class="dropdown-toggle" onclick="fn_logout();">Logout</a>
-                        
-                    </li>
-                </ul>
-            </div>
+	            <ul class="nav pull-right">
+	                <li class="dropdown">
+	                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
+	
+	                    </a>
+	                    <ul class="dropdown-menu">
+	                        <li>
+	                            <a tabindex="-1" href="#">Profile</a>
+	                        </li>
+	                        <li class="divider"></li>
+	                        <li>
+	                            <a tabindex="-1" href="login.html">Logout</a>
+	                        </li>
+	                    </ul>
+	                </li>
+	            </ul>
+	            <ul class="nav">
+	                <li class="">
+	                    <a href="/ptfiList">검사대상정보</a>
+	                </li>
+	                <li class="">
+	                    <a href="/fprdList">어선검사 신청내역</a>
+	                </li>
+	                
+	                <li class="">
+	                    <a href="/stpdList">선박 검사내역</a>
+	                </li>
+	                
+	                <li class="">
+	                    <a href="/fmdList">어선데이터</a>
+	                </li>
+	                
+	                <li class="">
+	                    <a href="/ihpndList">여객선데이터</a>
+	                </li>
+	                
+	                <li class="">
+	                    <a href="/imgList">이미지 데이터</a>
+	                </li>
+	            </ul>
+	        </div>
         </div>
     </div>
 </div>

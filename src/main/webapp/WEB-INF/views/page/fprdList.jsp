@@ -8,7 +8,14 @@
 	<%@ include file="/WEB-INF/views/inc/gnb.jsp"%>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<%@ include file="/WEB-INF/views/inc/lnb.jsp"%>
+			<div class="span2" id="sidebar">
+			    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+			        <li>
+			            <a href="/fprdList"><i class="icon-chevron-right"></i>어선 검사 신청 내역</a>
+			        </li>
+			        
+			    </ul>
+			</div>
 			<!--/span-->
 			<div class="span10" id="content">
 				<div class="row-fluid">
@@ -17,6 +24,11 @@
 						<div class="navbar navbar-inner block-header">
 							<div class="muted pull-left">어선 검사 신청 내역</div>
 						</div>
+						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
+						   	<input type="hidden" name="excelType" value="fprd">
+                           	<input type="file" name="file">
+					      	<button onclick="frmSubmit()">전송</button>
+					    </form>
 						<div class="block-content collapse in" style="overflow-x: scroll;">
 							<div class="" style="width: max-content;">
 								<table class="table table-hover">
@@ -67,6 +79,12 @@
 	<script>
         function goPage(page){
         	location.href='/fprdList?page=' + page;
+        }
+        
+        function frmSubmit() {
+        	if(confirm('업로드를 하면 입력된 데이터는 모두 초기화됩니다.\n 업로드 하시겠습니까?')){
+        		$('#frm').submit();
+        	}
         }
         </script>
 </body>

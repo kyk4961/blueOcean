@@ -4,7 +4,7 @@
 
 <mapper namespace="ihppdMapper">
 	<insert id="insertIhppd" parameterType="java.util.Map">
-	  	INSERT INTO `inner_harbor_psnship_prt_data`
+	  	INSERT INTO `INNER_HARBOR_PSNSHIP_PRT_DATA`
 		(`RUTE_NM`,
 		`PORTCL_NO`,
 		`PORTCL_NM`,
@@ -55,7 +55,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-      		`inner_harbor_psnship_prt_data`
+      		`INNER_HARBOR_PSNSHIP_PRT_DATA`
 	]]>
   	</select>
 
@@ -83,7 +83,7 @@
 		    `SLNETR_PSNSHP_NO`,
 		    `SLNETR_PSNSHP_NM`
 		FROM
-			`inner_harbor_psnship_prt_data`
+			`INNER_HARBOR_PSNSHIP_PRT_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

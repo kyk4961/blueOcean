@@ -4,7 +4,7 @@
 
 <mapper namespace="ihpmrwdMapper">
 	<insert id="insertIhpmrwd" parameterType="java.util.Map">
-		INSERT INTO `inner_harbor_psnship_main_rute_wether_data`
+		INSERT INTO `INNER_HARBOR_PSNSHIP_MAIN_RUTE_WETHER_DATA`
 		(`RUTE_NM`,
 		`WR_INFO_NO`,
 		`WR_OBSV_TM`,
@@ -37,7 +37,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-        	`inner_harbor_psnship_main_rute_wether_data`
+        	`INNER_HARBOR_PSNSHIP_MAIN_RUTE_WETHER_DATA`
 	]]>
   	</select>
 
@@ -56,7 +56,7 @@
 		    `RST_WIND_SPD`,
 		    `RST_WVHGT`
 		FROM
-			`inner_harbor_psnship_main_rute_wether_data`
+			`INNER_HARBOR_PSNSHIP_MAIN_RUTE_WETHER_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

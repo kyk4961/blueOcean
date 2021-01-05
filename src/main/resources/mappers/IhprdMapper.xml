@@ -4,7 +4,7 @@
 
 <mapper namespace="ihprdMapper">
 	<insert id="insertIhprd" parameterType="java.util.Map">
-	  	INSERT INTO `inner_harbor_psnship_rute_data`
+	  	INSERT INTO `INNER_HARBOR_PSNSHIP_RUTE_DATA`
 		(`CMPTNC_BROFFI_CODE`,
 		`RUTE_NM`,
 		`RUTE_SCTN_NO`,
@@ -53,7 +53,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-      		`inner_harbor_psnship_rute_data`
+      		`INNER_HARBOR_PSNSHIP_RUTE_DATA`
 	]]>
   	</select>
 
@@ -80,7 +80,7 @@
 		    `SAIL_VSL_CN`,
 		    `NVGT_CHRT_PHOTO_NM`
 		FROM
-			`inner_harbor_psnship_rute_data`
+			`INNER_HARBOR_PSNSHIP_RUTE_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

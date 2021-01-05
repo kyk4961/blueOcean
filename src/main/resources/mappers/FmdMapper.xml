@@ -4,7 +4,7 @@
 
 <mapper namespace="fmdMapper">
 	<insert id="insertFmd" parameterType="java.util.Map">
-	  	INSERT INTO `fshrbt_mesure_data`
+	  	INSERT INTO `FSHRBT_MESURE_DATA`
 		(`APPL_GUBUN`,
 		`REG_PORT`,
 		`SHIP_GUBUN`,
@@ -51,7 +51,7 @@
 		SELECT
 			COUNT(IDX)
       	FROM
-        	`fshrbt_mesure_data`
+        	`FSHRBT_MESURE_DATA`
 	]]>
   	</select>
 
@@ -77,7 +77,7 @@
 		    `TOT_UP_BULK`,
 		    `EXPT_TOT_BULK`
 		FROM
-			`fshrbt_mesure_data`
+			`FSHRBT_MESURE_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>

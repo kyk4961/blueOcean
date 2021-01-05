@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="span2" id="sidebar">
     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-        <li>
+    
+    	<li>
             <a href="/ptfiList"><i class="icon-chevron-right"></i>검사 대상 어선 정보</a>
         </li>
         <li>
-            <a href="/stpdList"><i class="icon-chevron-right"></i>선박 물건 검사 내역</a>
+            <a href="/fprdList"><i class="icon-chevron-right"></i>어선 검사 신청 내역</a>
         </li>
         <li>
-            <a href="/fprdList"><i class="icon-chevron-right"></i>어선 검사 신청 내역</a>
+            <a href="/stpdList"><i class="icon-chevron-right"></i>선박 물건 검사 내역</a>
         </li>
         <li>
             <a href="/fmdList"><i class="icon-chevron-right"></i>어선 측정 데이터</a>

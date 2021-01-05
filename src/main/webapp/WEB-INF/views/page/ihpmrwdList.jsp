@@ -8,7 +8,28 @@
 	<%@ include file="/WEB-INF/views/inc/gnb.jsp"%>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<%@ include file="/WEB-INF/views/inc/lnb.jsp"%>
+			<div class="span2" id="sidebar">
+			    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+			        <li>
+			            <a href="/ihpndList"><i class="icon-chevron-right"></i>내항 여객선 운항 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihprdList"><i class="icon-chevron-right"></i>내항 여객선 항로 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihpifdList"><i class="icon-chevron-right"></i>내항 여객선 항로 위해요소 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihppdList"><i class="icon-chevron-right"></i>내항 여객선 기항지 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihpmncdList"><i class="icon-chevron-right"></i>내항 여객선 월별 운항통제 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihpmrwdList"><i class="icon-chevron-right"></i>내항 여객선 주요 항로 기상 데이터</a>
+			        </li>
+			    </ul>
+			</div>
 			<!--/span-->
 			<div class="span10" id="content">
 				<div class="row-fluid">
@@ -17,6 +38,11 @@
 						<div class="navbar navbar-inner block-header">
 							<div class="muted pull-left">내항 여객선 주요 항로 기상 데이터</div>
 						</div>
+						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
+						   	<input type="hidden" name="excelType" value="ihpmrwd">
+                           	<input type="file" name="file">
+					      	<button onclick="frmSubmit()">전송</button>
+					    </form>
 						<div class="block-content collapse in" style="overflow-x: scroll;">
 							<div class="" style="width: max-content;">
 								<table class="table table-hover">
@@ -79,6 +105,12 @@
 	<script>
         function goPage(page){
         	location.href='/ihpmrwdList?page=' + page;
+        }
+        
+        function frmSubmit() {
+        	if(confirm('업로드를 하면 입력된 데이터는 모두 초기화됩니다.\n 업로드 하시겠습니까?')){
+        		$('#frm').submit();
+        	}
         }
         </script>
 </body>

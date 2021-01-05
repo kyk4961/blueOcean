@@ -4,7 +4,7 @@
 
 <mapper namespace="ihpmncdMapper">
 	<insert id="insertIhpmncd" parameterType="java.util.Map">
-	  	INSERT INTO `inner_harbor_psnship_mnby_nvg_cnrl_data`
+	  	INSERT INTO `INNER_HARBOR_PSNSHIP_MNBY_NVG_CNRL_DATA`
 		(`YYYY`,
 		`MM`,
 		`PASNGR_SAFE_CNTER`,
@@ -45,7 +45,7 @@
 	  	SELECT
 			COUNT(IDX)
       	FROM
-        	`inner_harbor_psnship_mnby_nvg_cnrl_data`
+        	`INNER_HARBOR_PSNSHIP_MNBY_NVG_CNRL_DATA`
 	]]>
   	</select>
 
@@ -68,7 +68,7 @@
 		    `NNAVI_IMPRMN`,
 		    `NNAVI_ETC`
 		FROM
-			`inner_harbor_psnship_mnby_nvg_cnrl_data`
+			`INNER_HARBOR_PSNSHIP_MNBY_NVG_CNRL_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>
