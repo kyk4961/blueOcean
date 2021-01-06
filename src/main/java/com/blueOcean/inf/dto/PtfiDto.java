@@ -6,7 +6,7 @@ import lombok.Data;
 public class PtfiDto{
 	/* 1_검사_대상_어선_정보 */
 	private int IDX; //일련번호
-	private int SHIP_NO; //선박번호
+	private String SHIP_NO; //선박번호
 	private String SHIP_GUBUN; //구분(어선/일반선)
 	private float GROSS_TONNAGE; //총톤수
 	private float REG_LENGTH; //길이

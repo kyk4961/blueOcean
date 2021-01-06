@@ -4,6 +4,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ocean
     password: ocean
+    
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+        
 
   mvc:
     view:
@@ -20,4 +26,3 @@ spring:
 server:
   port: 8082
 
-    

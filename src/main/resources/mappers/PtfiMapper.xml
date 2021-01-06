@@ -5,7 +5,9 @@
 <mapper namespace="ptfiMapper">
 	<insert id="insertPtfi" parameterType="java.util.Map">
 	  	INSERT INTO `PRSEC_TRGET_FSHRBT_INFO`
-		(`SHIP_GUBUN`,
+		(
+		`SHIP_NO`,
+		`SHIP_GUBUN`,
 		`GROSS_TONNAGE`,
 		`REG_LENGTH`,
 		`REG_BREADTH`,
@@ -17,6 +19,7 @@
 		VALUES
 		<foreach item="item" index="index" collection="list" separator=" , ">
 		(
+		#{item.SHIP_NO},
 		#{item.SHIP_GUBUN},
 		#{item.GROSS_TONNAGE},
 		#{item.REG_LENGTH},
@@ -43,6 +46,7 @@
 	<![CDATA[
 		SELECT 
 			`IDX`,
+		    `SHIP_NO`,
 		    `SHIP_GUBUN`,
 		    `GROSS_TONNAGE`,
 		    `REG_LENGTH`,

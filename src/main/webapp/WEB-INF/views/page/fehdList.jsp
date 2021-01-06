@@ -39,6 +39,7 @@
 								<table class="table table-hover">
 									<thead>
 										<tr>
+											<th>순번</th>
 											<th>주기관<br>종류코드
 											</th>
 											<th>주기관수</th>
@@ -92,7 +93,7 @@
         }
         
         function frmSubmit() {
-        	if(confirm('업로드를 하면 입력된 데이터는 모두 초기화됩니다.\n 업로드 하시겠습니까?')){
+        	if(confirm('업로드 하시겠습니까?')){
         		$('#frm').submit();
         	}
         }
