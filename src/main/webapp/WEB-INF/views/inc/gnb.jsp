@@ -9,20 +9,7 @@
             <a class="brand" href="#"></a>
             <div class="nav-collapse collapse">
 	            <ul class="nav pull-right">
-	                <li class="dropdown">
-	                    <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
-	
-	                    </a>
-	                    <ul class="dropdown-menu">
-	                        <li>
-	                            <a tabindex="-1" href="#">Profile</a>
-	                        </li>
-	                        <li class="divider"></li>
-	                        <li>
-	                            <a tabindex="-1" href="login.html">Logout</a>
-	                        </li>
-	                    </ul>
-	                </li>
+	                
 	            </ul>
 	            <ul class="nav">
 	                <li class="">
@@ -46,7 +33,7 @@
 	                
 	                <li class="">
 	                    <a href="/imgList">이미지 데이터</a>
-	                </li>
+	                </li> 
 	            </ul>
 	        </div>
         </div>

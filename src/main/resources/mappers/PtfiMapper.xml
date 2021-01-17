@@ -61,4 +61,10 @@
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>
+    
+    <delete id="deletePtfi">
+    <![CDATA[
+		DELETE FROM PRSEC_TRGET_FSHRBT_INFO WHERE IDX > 0
+	]]>
+	</delete>
 </mapper>

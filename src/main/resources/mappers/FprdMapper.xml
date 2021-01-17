@@ -48,4 +48,10 @@
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>
+    
+    <delete id="deleteFprd">
+    	<![CDATA[
+			DELETE FROM FSHRBT_PRSEC_REQST_DTLS WHERE IDX > 0
+		]]>
+	</delete>
 </mapper>

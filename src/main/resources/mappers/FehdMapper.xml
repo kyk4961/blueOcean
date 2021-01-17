@@ -59,4 +59,10 @@
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]>
 	</select>
+	
+	<delete id="deleteFehd">
+	<![CDATA[
+		DELETE FROM FSHRBT_ENGN_HRSPW_DATA WHERE IDX > 0
+	]]>
+	</delete>
 </mapper>

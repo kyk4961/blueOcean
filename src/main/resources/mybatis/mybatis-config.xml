@@ -7,7 +7,6 @@
 		<typeAlias alias="FprdDto" type="com.blueOcean.inf.dto.FprdDto" />
 		<typeAlias alias="IhpifdDto" type="com.blueOcean.inf.dto.IhpifdDto" />
 		<typeAlias alias="IhpmncdDto" type="com.blueOcean.inf.dto.IhpmncdDto" />
-		<typeAlias alias="IhpmrwdDto" type="com.blueOcean.inf.dto.IhpmrwdDto" />
 		<typeAlias alias="IhpndDto" type="com.blueOcean.inf.dto.IhpndDto" />
 		<typeAlias alias="IhppdDto" type="com.blueOcean.inf.dto.IhppdDto" />
 		<typeAlias alias="IhprdDto" type="com.blueOcean.inf.dto.IhprdDto" />

@@ -1,10 +1,10 @@
-package com.oceanAlert.admin;
+package com.blueOcean.inf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OceanAlertApplicationTests {
+class blueOceanApplication {
 
 	@Test
 	void contextLoads() {

@@ -45,4 +45,10 @@
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>
+    
+    <delete id="deleteStpd">
+    <![CDATA[
+		DELETE FROM SHIP_THING_PRSEC_DTLS WHERE IDX > 0
+	]]>
+	</delete>
 </mapper>

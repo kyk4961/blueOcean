@@ -87,4 +87,10 @@
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>
+    
+    <delete id="deleteihppd">
+    <![CDATA[
+		DELETE FROM INNER_HARBOR_PSNSHIP_PRT_DATA WHERE IDX > 0
+	]]>
+	</delete>
 </mapper>

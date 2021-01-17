@@ -72,4 +72,10 @@
 		LIMIT #{limitStartNo}, #{pageSize}
 	]]> 
     </select>
+    
+    <delete id="deleteIhpmncd">
+    <![CDATA[
+		DELETE FROM INNER_HARBOR_PSNSHIP_MNBY_NVG_CNRL_DATA WHERE IDX > 0
+	]]>
+	</delete>
 </mapper>

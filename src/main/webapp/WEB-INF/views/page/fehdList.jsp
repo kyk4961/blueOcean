@@ -31,8 +31,13 @@
 						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
 							<input type="hidden" name="excelType" value="fehd">
                            	<input type="file" name="file">
-					      	<button onclick="frmSubmit()">전송</button>
+					      	<button type="button" onclick="frmSubmit()">전송</button>
 					    </form>
+					    <form action="/dataClear" method="POST" id="clear">
+					    	<input type="hidden" name="excelType" value="fehd">
+					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
+					    </form>
+					    
 						
 						<div class="block-content collapse in" style="overflow-x: scroll;">
 							<div class="" style="width: max-content;">
@@ -97,6 +102,12 @@
         		$('#frm').submit();
         	}
         }
+        function dataclear(){
+        	if(confirm('데이터를 초기화 하시겠습니까?')){
+        		$('#clear').submit();
+        	}
+        }
+        
     </script>
 </body>
 </html>

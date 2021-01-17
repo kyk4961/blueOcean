@@ -32,8 +32,5 @@
         <li>
             <a href="/ihpmncdList"><i class="icon-chevron-right"></i>내항 여객선 월별 운항통제 데이터</a>
         </li>
-        <li>
-            <a href="/ihpmrwdList"><i class="icon-chevron-right"></i>내항 여객선 주요 항로 기상 데이터</a>
-        </li>
     </ul>
 </div>

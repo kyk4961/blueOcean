@@ -25,9 +25,6 @@
 			        <li>
 			            <a href="/ihpmncdList"><i class="icon-chevron-right"></i>내항 여객선 월별 운항통제 데이터</a>
 			        </li>
-			        <li>
-			            <a href="/ihpmrwdList"><i class="icon-chevron-right"></i>내항 여객선 주요 항로 기상 데이터</a>
-			        </li>
 			    </ul>
 			</div>
 			<!--/span-->
@@ -41,8 +38,13 @@
 						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
 						   	<input type="hidden" name="excelType" value="ihpifd">
                            	<input type="file" name="file">
-					      	<button onclick="frmSubmit()">전송</button>
+					      	<button type="button" onclick="frmSubmit()">전송</button>
 					    </form>
+					    <form action="/dataClear" method="POST" id="clear">
+					    	<input type="hidden" name="excelType" value="ihpifd">
+					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
+					    </form>
+					    
 						<div class="block-content collapse in" style="overflow-x: scroll;">
 							<div class="" style="width: max-content;">
 								<table class="table table-hover">
@@ -111,6 +113,12 @@
         		$('#frm').submit();
         	}
         }
+        function dataclear(){
+        	if(confirm('데이터를 초기화 하시겠습니까?')){
+        		$('#clear').submit();
+        	}
+        }
+        
         </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.blueOcean.inf.service;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
-public class ExcelService {
+public class UploadService {
 
 	@Autowired
 	protected SqlSessionTemplate dao;
@@ -73,7 +74,6 @@ public class ExcelService {
 	    		  importMap.put(columnList.get(j), row.getCell(j).toString());
 	    	  }
 	      }
-	      // TODO : 데이터 가공 필요 시, 로직 추가
 	      
 	      // ROW가 전체 null값일 경우, import 제외
 	      if (isData) {
@@ -99,9 +99,6 @@ public class ExcelService {
 		    case "ihpmncd": // 내항 여객선 월별 운항통제 데이터
 		    	dao.insert("ihpmncdMapper.insertIhpmncd", map);
 		        break;
-		    case "ihpmrwd": // 내항 여객선 주요 항로 기상 데이터
-		    	dao.insert("ihpmrwdMapper.insertIhpmrwd", map);
-		        break;
 		    case "ihpnd": // 내항 여객선 운항 데이터
 		    	dao.insert("ihpndMapper.insertIhpnd", map);
 		        break;
@@ -122,4 +119,53 @@ public class ExcelService {
 	    }
 	    
 	}
+
+	public void imageUpload(List<MultipartFile> files, String excelType) {
+		try{
+	        for(int i=0;i<files.size();i++){
+	            files.get(i).transferTo(new File("C:\\data\\image\\"+files.get(i).getOriginalFilename()));
+	        }
+	    }catch (IllegalStateException | IOException e){
+	        e.printStackTrace();
+	    }
+		
+	}
+
+	public void dataClear(String excelType) throws IOException{
+		switch(excelType) {
+	    case "fehd": // 어선 기관 마력 데이터
+	    	dao.insert("fehdMapper.deleteFehd");
+	        break;
+	    case "fmd": // 어선 측정 데이터
+	    	dao.insert("fmdMapper.deleteFmd");
+	        break;
+	    case "fprd": // 어선 검사 신청 내역
+	    	dao.insert("fprdMapper.deleteFprd");
+	        break;
+	    case "ihpifd": // 내항 여객선 항로 위해요소 데이터
+	    	dao.insert("ihpifdMapper.deleteIhpifd");
+	        break;
+	    case "ihpmncd": // 내항 여객선 월별 운항통제 데이터
+	    	dao.insert("ihpmncdMapper.deleteIhpmncd");
+	        break;
+	    case "ihpnd": // 내항 여객선 운항 데이터
+	    	dao.insert("ihpndMapper.deleteIhpnd");
+	        break;
+	    case "ihppd": // 내항 여객선 기항지 데이터
+	    	dao.insert("ihppdMapper.deleteIhppd");
+	        break;
+	    case "ihprd": // 내항 여객선 항로 데이터
+	    	dao.insert("ihprdMapper.deleteIhprd");
+	        break;
+	    case "ptfi": // 검사 대상 어선 정보
+	    	dao.insert("ptfiMapper.deletePtfi");
+	        break;
+	    case "stpd": // 선박 물건 검사 내역
+	    	dao.insert("stpdMapper.deleteStpd");
+	        break;
+	    default:
+	    	throw new IOException("올바르지 않은 유형입니다.");
+    }
+	}
+	
 }
