@@ -142,7 +142,7 @@ public class UploadService {
 	public void imageUpload(List<MultipartFile> files, String excelType) {
 		try{
 	        for(int i=0;i<files.size();i++){
-	            files.get(i).transferTo(new File("C:\\data\\image\\"+files.get(i).getOriginalFilename()));
+	            files.get(i).transferTo(new File("/data/image/"+files.get(i).getOriginalFilename()));
 	        }
 	    }catch (IllegalStateException | IOException e){
 	        e.printStackTrace();
