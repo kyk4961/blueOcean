@@ -22,7 +22,7 @@ public class MainController {
 	
 	@RequestMapping(value="/")
 	public String main(HttpServletRequest request) throws Exception {
-		return "redirect:/ptfiList";
+		return "redirect:/ptfi1List";
 	}
 	
 	@RequestMapping(value="/excel/upload", method = RequestMethod.POST)

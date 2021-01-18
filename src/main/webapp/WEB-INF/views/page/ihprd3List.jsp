@@ -10,6 +10,7 @@
 		<div class="row-fluid">
 			<div class="span2" id="sidebar">
 			    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+			   
 			        <li>
 			            <a href="/ihpndList"><i class="icon-chevron-right"></i>내항 여객선 운항 데이터</a>
 			        </li>
@@ -39,15 +40,15 @@
 					<!-- block -->
 					<div class="block">
 						<div class="navbar navbar-inner block-header">
-							<div class="muted pull-left">내항 여객선 월별 운항통제 데이터</div>
+							<div class="muted pull-left">내항 여객선 항로 통항선박 데이터</div>
 						</div>
 						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
-						   	<input type="hidden" name="excelType" value="ihpmncd">
+						   	<input type="hidden" name="excelType" value="ihprd3">
                            	<input type="file" name="file">
 					      	<button type="button" onclick="frmSubmit()">전송</button>
 					    </form>
 					    <form action="/dataClear" method="POST" id="clear">
-					    	<input type="hidden" name="excelType" value="ihpmncd">
+					    	<input type="hidden" name="excelType" value="ihprd3">
 					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
 					    </form>
 					    
@@ -57,31 +58,18 @@
 									<thead>
 										<tr>
 											<th>순번</th>
-											<th>연도</th>
-											<th>월</th>
 											<th>관할지사<br>명칭
 											</th>
-											<th>항로<br>순번
+											<th>항로명칭</th>
+											<th>항로코드</th>
+											<th>항로구간<br>순번
 											</th>
-											<th>항로<br>명칭
+											<th>항로구간명</th>
+											<th>주요통항선박<br>순번
 											</th>
-											<th>통제일수<br>태풍
+											<th>주요통항선박<br>유형
 											</th>
-											<th>통제일수<br>풍랑경보
-											</th>
-											<th>통제일수<br>풍랑주의보
-											</th>
-											<th>통제일수<br>기상악화
-											</th>
-											<th>통제일수<br>안개
-											</th>
-											<th>통제일수<br>기타
-											</th>
-											<th>휴항일수<br>선박검사
-											</th>
-											<th>휴항일수<br>선박정비
-											</th>
-											<th>휴항일수<br>기타
+											<th>항로<br>사진파일명
 											</th>
 										</tr>
 									</thead>
@@ -89,20 +77,14 @@
 										<c:forEach var="list" items="${list}" varStatus="i">
 											<tr>
 												<td>${paging.totalCount - ((paging.pageNo-1) * paging.pageSize) - i.index}</td>
-												<td>${list.YYYY}</td>
-												<td>${list.MM}</td>
 												<td>${list.CMPTNC_BROFFI_NM}</td>
-												<td>${list.RUTE_NO}</td>
 												<td>${list.RUTE_NM}</td>
-												<td>${list.CTRL_TYPHOON}</td>
-												<td>${list.CTRL_WDWV_WARN}</td>
-												<td>${list.CTRL_WDWV_ADV}</td>
-												<td>${list.CRTL_DTRT_WR}</td>
-												<td>${list.CTRL_RSTC_VISIBIL}</td>
-												<td>${list.CTRL_ETC}</td>
-												<td>${list.NNAVI_ISPT}</td>
-												<td>${list.NNAVI_IMPRMN}</td>
-												<td>${list.NNAVI_ETC}</td>
+												<td>${list.RUTE_CODE}</td>
+												<td>${list.RUTE_SCTN_NO}</td>
+												<td>${list.RUTE_SCTN_NM}</td>
+												<td>${list.SAIL_VSL_NO}</td>
+												<td>${list.SAIL_VSL_KND}</td>
+												<td>${list.NVGT_CHRT_PHOTO_NM}</td>
 											</tr>
 										</c:forEach>
 
@@ -128,7 +110,7 @@
 	</div>
 	<script>
         function goPage(page){
-        	location.href='/ihpmncdList?page=' + page;
+        	location.href='/ihprd3List?page=' + page;
         }
         
         function frmSubmit() {

@@ -15,7 +15,13 @@
 			            <a href="/ihpndList"><i class="icon-chevron-right"></i>내항 여객선 운항 데이터</a>
 			        </li>
 			        <li>
-			            <a href="/ihprdList"><i class="icon-chevron-right"></i>내항 여객선 항로 데이터</a>
+			            <a href="/ihprd1List"><i class="icon-chevron-right"></i>내항 여객선 항로 조류 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihprd2List"><i class="icon-chevron-right"></i>내항 여객선 항로 조석 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihprd3List"><i class="icon-chevron-right"></i>내항 여객선 항로 통항선박 데이터</a>
 			        </li>
 			        <li>
 			            <a href="/ihpifdList"><i class="icon-chevron-right"></i>내항 여객선 항로 위해요소 데이터</a>

@@ -10,6 +10,7 @@ public class IhpndDto{
 	private String RUTE_NM; //항로명칭
 	private String PSNSHP_NO; //운항여객선_순번
 	private String PSNSHP_NM; //운항여객선명칭
+	private String PSNSHP_CODE; //운항여객선코드
 	private String NVGT_ZONE_NM; //항해구역
 	private int PSNSHP_GT; //총톤수
 	private int PASNGR_PCAPA_CO; //여객정원

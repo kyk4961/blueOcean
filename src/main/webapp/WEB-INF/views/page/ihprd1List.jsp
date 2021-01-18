@@ -10,11 +10,28 @@
 		<div class="row-fluid">
 			<div class="span2" id="sidebar">
 			    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-			    
-			    	<li>
-			            <a href="/ptfiList"><i class="icon-chevron-right"></i>검사 대상 어선 정보</a>
+			   
+			        <li>
+			            <a href="/ihpndList"><i class="icon-chevron-right"></i>내항 여객선 운항 데이터</a>
 			        </li>
-			        
+			        <li>
+			            <a href="/ihprd1List"><i class="icon-chevron-right"></i>내항 여객선 항로 조류 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihprd2List"><i class="icon-chevron-right"></i>내항 여객선 항로 조석 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihprd3List"><i class="icon-chevron-right"></i>내항 여객선 항로 통항선박 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihpifdList"><i class="icon-chevron-right"></i>내항 여객선 항로 위해요소 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihppdList"><i class="icon-chevron-right"></i>내항 여객선 기항지 데이터</a>
+			        </li>
+			        <li>
+			            <a href="/ihpmncdList"><i class="icon-chevron-right"></i>내항 여객선 월별 운항통제 데이터</a>
+			        </li>
 			    </ul>
 			</div>
 			<!--/span-->
@@ -23,15 +40,15 @@
 					<!-- block -->
 					<div class="block">
 						<div class="navbar navbar-inner block-header">
-							<div class="muted pull-left">검사 대상 어선 정보</div>
+							<div class="muted pull-left">내항 여객선 항로 조류 데이터</div>
 						</div>
 						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
-						   	<input type="hidden" name="excelType" value="ptfi">
+						   	<input type="hidden" name="excelType" value="ihprd1">
                            	<input type="file" name="file">
 					      	<button type="button" onclick="frmSubmit()">전송</button>
 					    </form>
 					    <form action="/dataClear" method="POST" id="clear">
-					    	<input type="hidden" name="excelType" value="ptfi">
+					    	<input type="hidden" name="excelType" value="ihprd1">
 					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
 					    </form>
 					    
@@ -41,32 +58,33 @@
 									<thead>
 										<tr>
 											<th>순번</th>
-											<th>선박번호</th>
-											<th>구분</th>
-											<th>총톤수</th>
-											<th>길이</th>
-											<th>너비</th>
-											<th>깊이</th>
-											<th>선질</th>
-											<th>용도</th>
-											<th>세부용도</th>
-											<th>선적항</th>
+											<th>관할지사<br>명칭</th>
+											<th>항로명칭</th>
+											<th>항로구간<br>순번
+											</th>
+											<th>항로구간명</th>
+											<th>조류<br>최강창조류<br>(유항)
+											</th>
+											<th>조류<br>최강창조류<br>(유속)
+											</th>
+											<th>조류<br>최강낙조류<br>(유항)
+											</th>
+											<th>조류<br>최강낙조류<br>(유속)
+											</th>
 										</tr>
 									</thead>
 									<tbody>
 										<c:forEach var="list" items="${list}" varStatus="i">
 											<tr>
 												<td>${paging.totalCount - ((paging.pageNo-1) * paging.pageSize) - i.index}</td>
-												<td>${list.SHIP_NO}</td>
-												<td>${list.SHIP_GUBUN}</td>
-												<td>${list.GROSS_TONNAGE}</td>
-												<td>${list.REG_LENGTH}</td>
-												<td>${list.REG_BREADTH}</td>
-												<td>${list.REG_DEPTH}</td>
-												<td>${list.NATURE}</td>
-												<td>${list.PURPOSE}</td>
-												<td>${list.PURPOSE_GU}</td>
-												<td>${list.REG_PORT}</td>
+												<td>${list.CMPTNC_BROFFI_NM}</td>
+												<td>${list.RUTE_NM}</td>
+												<td>${list.RUTE_SCTN_NO}</td>
+												<td>${list.RUTE_SCTN_NM}</td>
+												<td>${list.MAX_FLOOD_DIR}</td>
+												<td>${list.MAX_FLOOD_RATE}</td>
+												<td>${list.MIN_FLOOD_DIR}</td>
+												<td>${list.MIN_FLOOD_RATE}</td>
 											</tr>
 										</c:forEach>
 
@@ -92,7 +110,7 @@
 	</div>
 	<script>
         function goPage(page){
-        	location.href='/ptfiList?page=' + page;
+        	location.href='/ihprd1List?page=' + page;
         }
         
         function frmSubmit() {
@@ -100,12 +118,12 @@
         		$('#frm').submit();
         	}
         }
-        
         function dataclear(){
         	if(confirm('데이터를 초기화 하시겠습니까?')){
         		$('#clear').submit();
         	}
         }
+        
         </script>
 </body>
 </html>

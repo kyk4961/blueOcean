@@ -15,11 +15,20 @@ public class PtfiService {
 	@Autowired
 	protected SqlSessionTemplate dao;
 
-	public int selectPtfiCnt() {
-		return dao.selectOne("ptfiMapper.selectPtfiCnt");
+	public int selectPtfi1Cnt() {
+		return dao.selectOne("ptfiMapper.selectPtfi1Cnt");
 	}
 
-	public List<PtfiDto> selectPtfiListPage(PagingDto paging) {
-		return dao.selectList("ptfiMapper.selectPtfiListPage", paging);
+	public List<PtfiDto> selectPtfi1ListPage(PagingDto paging) {
+		return dao.selectList("ptfiMapper.selectPtfi1ListPage", paging);
 	}
+	
+	public int selectPtfi2Cnt() {
+		return dao.selectOne("ptfiMapper.selectPtfi2Cnt");
+	}
+
+	public List<PtfiDto> selectPtfi2ListPage(PagingDto paging) {
+		return dao.selectList("ptfiMapper.selectPtfi2ListPage", paging);
+	}
+
 }

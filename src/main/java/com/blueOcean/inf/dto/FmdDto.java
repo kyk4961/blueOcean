@@ -9,6 +9,7 @@ public class FmdDto{
 	private String APPL_GUBUN; //신청구분
 	private String REG_PORT; //선적항
 	private String SHIP_GUBUN; //선박종류
+	private String CLASS; //선질
 	private String NATURE; //선질
 	private String SBUILDER_ADD; //조선지
 	private String LAUNCH_DATE; //진수일

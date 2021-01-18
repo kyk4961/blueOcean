@@ -18,18 +18,33 @@ public class PtfiController {
 	@Autowired
 	private PtfiService ptfiService;
 
-	@RequestMapping(value = "/ptfiList")
+	@RequestMapping(value = "/ptfi1List")
 	public String ptfiList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
 		PagingDto paging = new PagingDto();
-		int totalCount = ptfiService.selectPtfiCnt();
+		int totalCount = ptfiService.selectPtfi1Cnt();
 		paging.setPageNo(page);
 		paging.setPageSize(10);
 		paging.setTotalCount(totalCount);
-		List<PtfiDto> list = ptfiService.selectPtfiListPage(paging);
+		List<PtfiDto> list = ptfiService.selectPtfi1ListPage(paging);
 
 		model.addAttribute("paging", paging);
 		model.addAttribute("list", list);
 
-		return "page/ptfiList";
+		return "page/ptfi1List";
+	}
+	
+	@RequestMapping(value = "/ptfi2List")
+	public String ptfi2List(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		PagingDto paging = new PagingDto();
+		int totalCount = ptfiService.selectPtfi2Cnt();
+		paging.setPageNo(page);
+		paging.setPageSize(10);
+		paging.setTotalCount(totalCount);
+		List<PtfiDto> list = ptfiService.selectPtfi2ListPage(paging);
+
+		model.addAttribute("paging", paging);
+		model.addAttribute("list", list);
+
+		return "page/ptfi2List";
 	}
 }

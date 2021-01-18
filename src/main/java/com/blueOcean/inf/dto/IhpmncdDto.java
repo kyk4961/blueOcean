@@ -8,7 +8,7 @@ public class IhpmncdDto {
 	private int IDX; //일련번호
 	private String YYYY; //연도
 	private String MM; //월
-	private String PASNGR_SAFE_CNTER; //관할지사_명칭
+	private String CMPTNC_BROFFI_NM; //관할지사_명칭
 	private String RUTE_NO; //항로_순번
 	private String RUTE_NM; //항로_명칭
 	private int CTRL_TYPHOON; //통제일수_태풍

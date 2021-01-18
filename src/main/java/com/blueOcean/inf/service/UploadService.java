@@ -60,8 +60,18 @@ public class UploadService {
 	    // 세번째 ROW부터 데이터 추출하여, Key - Value 형태로 값 담기
 	    Map<String, Object> map = new HashMap<>();
 	    List<Map<String, String>> importMapList = new ArrayList<>();
-	    
-	    for (int i=2; i<worksheet.getPhysicalNumberOfRows(); i++) {
+	    int startNum = 1;
+	    if(excelType.equals("fehd") || 
+    		excelType.equals("fmd") ||
+    		excelType.equals("fprd") ||
+    		excelType.equals("ptfi1") ||
+    		excelType.equals("ptfi2") ||
+    		excelType.equals("stpd")) {
+	    	startNum = 1;
+	    } else {
+	    	startNum = 2;
+	    }
+	    for (int i=startNum; i<worksheet.getPhysicalNumberOfRows(); i++) {
 	      boolean isData = false;
 	      Row row = worksheet.getRow(i);
 	      
@@ -105,11 +115,20 @@ public class UploadService {
 		    case "ihppd": // 내항 여객선 기항지 데이터
 		    	dao.insert("ihppdMapper.insertIhppd", map);
 		        break;
-		    case "ihprd": // 내항 여객선 항로 데이터
-		    	dao.insert("ihprdMapper.insertIhprd", map);
+		    case "ihprd1": // 내항 여객선 항로 조류 데이터
+		    	dao.insert("ihprdMapper.insertIhprd1", map);
 		        break;
-		    case "ptfi": // 검사 대상 어선 정보
-		    	dao.insert("ptfiMapper.insertPtfi", map);
+		    case "ihprd2": // 내항 여객선 항로 조석 데이터
+		    	dao.insert("ihprdMapper.insertIhprd2", map);
+		        break;
+		    case "ihprd3": // 내항 여객선 항로 통항선박 데이터
+		    	dao.insert("ihprdMapper.insertIhprd3", map);
+		        break;
+		    case "ptfi1": // 검사 대상 어선 정보
+		    	dao.insert("ptfiMapper.insertPtfi1", map);
+		        break;
+		    case "ptfi2": // 검사 대상 어선 정보
+		    	dao.insert("ptfiMapper.insertPtfi2", map);
 		        break;
 		    case "stpd": // 선박 물건 검사 내역
 		    	dao.insert("stpdMapper.insertStpd", map);
@@ -154,11 +173,20 @@ public class UploadService {
 	    case "ihppd": // 내항 여객선 기항지 데이터
 	    	dao.insert("ihppdMapper.deleteIhppd");
 	        break;
-	    case "ihprd": // 내항 여객선 항로 데이터
-	    	dao.insert("ihprdMapper.deleteIhprd");
+	    case "ihprd1": // 내항 여객선 항로 데이터
+	    	dao.insert("ihprdMapper.deleteIhprd1");
 	        break;
-	    case "ptfi": // 검사 대상 어선 정보
-	    	dao.insert("ptfiMapper.deletePtfi");
+	    case "ihprd2": // 내항 여객선 항로 데이터
+	    	dao.insert("ihprdMapper.deleteIhprd2");
+	        break;
+	    case "ihprd3": // 내항 여객선 항로 데이터
+	    	dao.insert("ihprdMapper.deleteIhprd3");
+	        break;
+	    case "ptfi1": // 검사 대상 어선 정보
+	    	dao.insert("ptfiMapper.deletePtfi1");
+	        break;
+	    case "ptfi2": // 검사 대상 어선 정보
+	    	dao.insert("ptfiMapper.deletePtfi2");
 	        break;
 	    case "stpd": // 선박 물건 검사 내역
 	    	dao.insert("stpdMapper.deleteStpd");

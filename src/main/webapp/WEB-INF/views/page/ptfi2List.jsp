@@ -10,26 +10,13 @@
 		<div class="row-fluid">
 			<div class="span2" id="sidebar">
 			    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-			        <li>
-			            <a href="/ihpndList"><i class="icon-chevron-right"></i>내항 여객선 운항 데이터</a>
+			    
+			    	<li>
+			            <a href="/ptfi1List"><i class="icon-chevron-right"></i>검사 대상 어선 정보</a>
 			        </li>
+			        
 			        <li>
-			            <a href="/ihprd1List"><i class="icon-chevron-right"></i>내항 여객선 항로 조류 데이터</a>
-			        </li>
-			        <li>
-			            <a href="/ihprd2List"><i class="icon-chevron-right"></i>내항 여객선 항로 조석 데이터</a>
-			        </li>
-			        <li>
-			            <a href="/ihprd3List"><i class="icon-chevron-right"></i>내항 여객선 항로 통항선박 데이터</a>
-			        </li>
-			        <li>
-			            <a href="/ihpifdList"><i class="icon-chevron-right"></i>내항 여객선 항로 위해요소 데이터</a>
-			        </li>
-			        <li>
-			            <a href="/ihppdList"><i class="icon-chevron-right"></i>내항 여객선 기항지 데이터</a>
-			        </li>
-			        <li>
-			            <a href="/ihpmncdList"><i class="icon-chevron-right"></i>내항 여객선 월별 운항통제 데이터</a>
+			            <a href="/ptfi2List"><i class="icon-chevron-right"></i>검사 대상 일반선 정보</a>
 			        </li>
 			    </ul>
 			</div>
@@ -39,15 +26,15 @@
 					<!-- block -->
 					<div class="block">
 						<div class="navbar navbar-inner block-header">
-							<div class="muted pull-left">내항 여객선 월별 운항통제 데이터</div>
+							<div class="muted pull-left">검사 대상 일반선 정보</div>
 						</div>
 						<form action="/excel/upload" method="POST" enctype="multipart/form-data" id="frm">
-						   	<input type="hidden" name="excelType" value="ihpmncd">
+						   	<input type="hidden" name="excelType" value="ptfi2">
                            	<input type="file" name="file">
 					      	<button type="button" onclick="frmSubmit()">전송</button>
 					    </form>
 					    <form action="/dataClear" method="POST" id="clear">
-					    	<input type="hidden" name="excelType" value="ihpmncd">
+					    	<input type="hidden" name="excelType" value="ptfi2">
 					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
 					    </form>
 					    
@@ -57,52 +44,30 @@
 									<thead>
 										<tr>
 											<th>순번</th>
-											<th>연도</th>
-											<th>월</th>
-											<th>관할지사<br>명칭
-											</th>
-											<th>항로<br>순번
-											</th>
-											<th>항로<br>명칭
-											</th>
-											<th>통제일수<br>태풍
-											</th>
-											<th>통제일수<br>풍랑경보
-											</th>
-											<th>통제일수<br>풍랑주의보
-											</th>
-											<th>통제일수<br>기상악화
-											</th>
-											<th>통제일수<br>안개
-											</th>
-											<th>통제일수<br>기타
-											</th>
-											<th>휴항일수<br>선박검사
-											</th>
-											<th>휴항일수<br>선박정비
-											</th>
-											<th>휴항일수<br>기타
-											</th>
+											<th>구분</th>
+											<th>총톤수</th>
+											<th>길이</th>
+											<th>너비</th>
+											<th>깊이</th>
+											<th>선질</th>
+											<th>용도</th>
+											<th>세부용도</th>
+											<th>선적항</th>
 										</tr>
 									</thead>
 									<tbody>
 										<c:forEach var="list" items="${list}" varStatus="i">
 											<tr>
 												<td>${paging.totalCount - ((paging.pageNo-1) * paging.pageSize) - i.index}</td>
-												<td>${list.YYYY}</td>
-												<td>${list.MM}</td>
-												<td>${list.CMPTNC_BROFFI_NM}</td>
-												<td>${list.RUTE_NO}</td>
-												<td>${list.RUTE_NM}</td>
-												<td>${list.CTRL_TYPHOON}</td>
-												<td>${list.CTRL_WDWV_WARN}</td>
-												<td>${list.CTRL_WDWV_ADV}</td>
-												<td>${list.CRTL_DTRT_WR}</td>
-												<td>${list.CTRL_RSTC_VISIBIL}</td>
-												<td>${list.CTRL_ETC}</td>
-												<td>${list.NNAVI_ISPT}</td>
-												<td>${list.NNAVI_IMPRMN}</td>
-												<td>${list.NNAVI_ETC}</td>
+												<td>${list.SHIP_GUBUN}</td>
+												<td>${list.GROSS_TONNAGE}</td>
+												<td>${list.REG_LENGTH}</td>
+												<td>${list.REG_BREADTH}</td>
+												<td>${list.REG_DEPTH}</td>
+												<td>${list.NATURE}</td>
+												<td>${list.PURPOSE}</td>
+												<td>${list.PURPOSE_GU}</td>
+												<td>${list.REG_PORT}</td>
 											</tr>
 										</c:forEach>
 
@@ -128,7 +93,7 @@
 	</div>
 	<script>
         function goPage(page){
-        	location.href='/ihpmncdList?page=' + page;
+        	location.href='/ptfi2List?page=' + page;
         }
         
         function frmSubmit() {
@@ -136,12 +101,12 @@
         		$('#frm').submit();
         	}
         }
+        
         function dataclear(){
         	if(confirm('데이터를 초기화 하시겠습니까?')){
         		$('#clear').submit();
         	}
         }
-        
         </script>
 </body>
 </html>

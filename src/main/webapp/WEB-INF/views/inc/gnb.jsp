@@ -13,7 +13,7 @@
 	            </ul>
 	            <ul class="nav">
 	                <li class="">
-	                    <a href="/ptfiList">검사대상정보</a>
+	                    <a href="/ptfi1List">검사대상정보</a>
 	                </li>
 	                <li class="">
 	                    <a href="/fprdList">어선검사 신청내역</a>

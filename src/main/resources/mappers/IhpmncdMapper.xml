@@ -7,7 +7,7 @@
 	  	INSERT INTO `INNER_HARBOR_PSNSHIP_MNBY_NVG_CNRL_DATA`
 		(`YYYY`,
 		`MM`,
-		`PASNGR_SAFE_CNTER`,
+		`CMPTNC_BROFFI_NM`,
 		`RUTE_NO`,
 		`RUTE_NM`,
 		`CTRL_TYPHOON`,
@@ -24,7 +24,7 @@
 		(
 		#{item.YYYY},
 		#{item.MM},
-		#{item.PASNGR_SAFE_CNTER},
+		#{item.CMPTNC_BROFFI_NM},
 		#{item.RUTE_NO},
 		#{item.RUTE_NM},
 		#{item.CTRL_TYPHOON},
@@ -55,7 +55,7 @@
 			`IDX`,
 		    `YYYY`,
 		    `MM`,
-		    `PASNGR_SAFE_CNTER`,
+		    `CMPTNC_BROFFI_NM`,
 		    `RUTE_NO`,
 		    `RUTE_NM`,
 		    `CTRL_TYPHOON`,

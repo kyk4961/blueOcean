@@ -88,7 +88,7 @@
 	]]> 
     </select>
     
-    <delete id="deleteihppd">
+    <delete id="deleteIhppd">
     <![CDATA[
 		DELETE FROM INNER_HARBOR_PSNSHIP_PRT_DATA WHERE IDX > 0
 	]]>
