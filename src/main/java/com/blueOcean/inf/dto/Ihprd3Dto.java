@@ -14,5 +14,5 @@ public class Ihprd3Dto{
 	private String SAIL_VSL_NO; //주요통항선박_순번
 	private String SAIL_VSL_KND; //주요통항선박_유형
 	private String SAIL_VSL_CN; //주요통항선박_내용
-	private String NVGT_CHRT_PHOTO_NM; //항로도_사진_파일명
+	private String SAIL_VSL_PHOTO_NM; //항로도_사진_파일명
 }

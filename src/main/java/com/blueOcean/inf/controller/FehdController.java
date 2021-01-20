@@ -32,4 +32,13 @@ public class FehdController {
 
 		return "page/fehdList";
 	}
+	
+	@RequestMapping(value = "/fehdExcelList")
+	public String fehdExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		List<FehdDto> list = fehdService.selectFehdList();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/fehdExcelList";
+	}
 }

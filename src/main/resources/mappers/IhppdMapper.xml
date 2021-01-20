@@ -88,6 +88,35 @@
 	]]> 
     </select>
     
+    <select id="selectIhppdList" resultType="IhppdDto" >
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `RUTE_NM`,
+		    `PORTCL_NO`,
+		    `PORTCL_NM`,
+		    `PORTCL_BERTH_NO`,
+		    `PORTCL_BERTH_PHOTO`,
+		    `PORTCL_BERTH_KND`,
+		    `BERTH_LT`,
+		    `BERTH_BT`,
+		    `BERTH_HG`,
+		    `BERTH_HDG`,
+		    `RESIDE_AT`,
+		    `RESIDE_POPLTN_CO`,
+		    `CNVNC_FCLTY_PHOTO`,
+		    `CNVNC_FCLTY_KND`,
+		    `CNVNC_FCLTY_NMPR_CO`,
+		    `BKOFF_AT`,
+		    `OP_DATE`,
+		    `SLNETR_PSNSHP_NO`,
+		    `SLNETR_PSNSHP_NM`
+		FROM
+			`INNER_HARBOR_PSNSHIP_PRT_DATA`
+		
+	]]> 
+    </select>
+    
     <delete id="deleteIhppd">
     <![CDATA[
 		DELETE FROM INNER_HARBOR_PSNSHIP_PRT_DATA WHERE IDX > 0

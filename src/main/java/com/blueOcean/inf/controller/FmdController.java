@@ -32,4 +32,13 @@ public class FmdController {
 
 		return "page/fmdList";
 	}
+	
+	@RequestMapping(value = "/fmdExcelList")
+	public String fmdExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		List<FmdDto> list = fmdService.selectFmdList();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/fmdExcelList";
+	}
 }

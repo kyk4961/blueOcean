@@ -22,4 +22,8 @@ public class StpdService {
 	public List<StpdDto> selectStpdListPage(PagingDto paging) {
 		return dao.selectList("stpdMapper.selectStpdListPage", paging);
 	}
+	
+	public List<StpdDto> selectStpdList() {
+		return dao.selectList("stpdMapper.selectStpdList");
+	}
 }

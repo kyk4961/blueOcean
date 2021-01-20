@@ -22,4 +22,8 @@ public class FehdService {
 	public List<FehdDto> selectFehdListPage(PagingDto paging) {
 		return dao.selectList("fehdMapper.selectFehdListPage", paging);
 	}
+
+	public List<FehdDto> selectFehdList() {
+		return dao.selectList("fehdMapper.selectFehdList");
+	}
 }

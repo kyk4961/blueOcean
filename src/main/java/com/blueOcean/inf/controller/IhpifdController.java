@@ -32,4 +32,13 @@ public class IhpifdController {
 
 		return "page/ihpifdList";
 	}
+	
+	@RequestMapping(value = "/ihpifdExcelList")
+	public String ihpifdExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		List<IhpifdDto> list = ihpifdService.selectIhpifdList();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/ihpifdExcelList";
+	}
 }

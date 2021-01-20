@@ -46,6 +46,21 @@
 	]]> 
     </select>
     
+    <select id="selectStpdList" resultType="StpdDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `FEE_GB`,
+		    `OFFICE_GUBUN`,
+		    `ACCT_DATE`,
+		    `MANU_QTY`,
+		    `MANUF_UNIT`
+		FROM
+			`SHIP_THING_PRSEC_DTLS`
+		
+	]]> 
+    </select>
+    
     <delete id="deleteStpd">
     <![CDATA[
 		DELETE FROM SHIP_THING_PRSEC_DTLS WHERE IDX > 0

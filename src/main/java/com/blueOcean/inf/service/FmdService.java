@@ -22,4 +22,8 @@ public class FmdService {
 	public List<FmdDto> selectFmdListPage(PagingDto paging) {
 		return dao.selectList("fmdMapper.selectFmdListPage", paging);
 	}
+
+	public List<FmdDto> selectFmdList() {
+		return dao.selectList("fmdMapper.selectFmdList");
+	}
 }

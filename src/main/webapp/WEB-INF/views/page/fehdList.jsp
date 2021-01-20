@@ -37,6 +37,9 @@
 					    	<input type="hidden" name="excelType" value="fehd">
 					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
 					    </form>
+					    <form action="/fehdExcelList" method="POST" id="download">
+					    	<button type="button" onclick="download()">내려받기</button>
+					    </form>
 					    
 						
 						<div class="block-content collapse in" style="overflow-x: scroll;">
@@ -106,6 +109,12 @@
         	if(confirm('데이터를 초기화 하시겠습니까?')){
         		$('#clear').submit();
         	}
+        }
+        
+        
+        function download(){
+        	$('#download').submit();
+        	
         }
         
     </script>

@@ -55,6 +55,24 @@
 	]]> 
     </select>
     
+    <select id="selectIhpifdList" resultType="IhpifdDto" >
+  	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `RUTE_NM`,
+		    `RISK_FCTR_NO`,
+		    `RISK_FCTR_KND_CODE`,
+		    `RISK_FCTR_LAT`,
+		    `RISK_FCTR_LONG`,
+		    `RISK_FCTR_POSC_DTL`,
+		    `RISK_FCTR_CN`,
+		    `RISK_FCTR_PHOTO`
+		FROM 
+			`INNER_HARBOR_PSNSHIP_INJRY_FACTOR_DATA`
+		
+	]]> 
+    </select>
+    
     <delete id="deleteIhpifd">
     <![CDATA[
 		DELETE FROM INNER_HARBOR_PSNSHIP_INJRY_FACTOR_DATA WHERE IDX > 0

@@ -32,4 +32,13 @@ public class FprdController {
 
 		return "page/fprdList";
 	}
+	
+	@RequestMapping(value = "/fprdExcelList")
+	public String fprdExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		List<FprdDto> list = fprdService.selectFprdList();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/fprdExcelList";
+	}
 }

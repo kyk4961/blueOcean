@@ -32,4 +32,14 @@ public class StpdController {
 
 		return "page/stpdList";
 	}
+	
+	@RequestMapping(value = "/stpdExcelList")
+	public String stpdExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		
+		List<StpdDto> list = stpdService.selectStpdList();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/stpdExcelList";
+	}
 }

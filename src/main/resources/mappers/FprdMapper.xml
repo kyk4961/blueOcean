@@ -49,6 +49,23 @@
 	]]> 
     </select>
     
+    <select id="selectFprdList" resultType="FprdDto">
+	<![CDATA[
+		SELECT
+			`IDX`,
+		    `ACCT_YEAR`,
+		    `ACCT_NO`,
+		    `ACCT_DATE`,
+		    `SHIP_KIND`,
+		    `OFFICE_GUBUN`,
+		    `ACCT_GUBUN`
+		FROM 
+			`FSHRBT_PRSEC_REQST_DTLS`
+		
+	]]> 
+    </select>
+    
+    
     <delete id="deleteFprd">
     	<![CDATA[
 			DELETE FROM FSHRBT_PRSEC_REQST_DTLS WHERE IDX > 0

@@ -22,4 +22,8 @@ public class IhpmncdService {
 	public List<IhpmncdDto> selectIhpmncdListPage(PagingDto paging) {
 		return dao.selectList("ihpmncdMapper.selectIhpmncdListPage", paging);
 	}
+	
+	public List<IhpmncdDto> selectIhpmncdList() {
+		return dao.selectList("ihpmncdMapper.selectIhpmncdList");
+	}
 }

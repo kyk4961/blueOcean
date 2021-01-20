@@ -22,4 +22,8 @@ public class FprdService {
 	public List<FprdDto> selectFprdListPage(PagingDto paging) {
 		return dao.selectList("fprdMapper.selectFprdListPage", paging);
 	}
+	
+	public List<FprdDto> selectFprdList() {
+		return dao.selectList("fprdMapper.selectFprdList");
+	}
 }

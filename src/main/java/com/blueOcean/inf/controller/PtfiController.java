@@ -47,4 +47,23 @@ public class PtfiController {
 
 		return "page/ptfi2List";
 	}
+	
+	@RequestMapping(value = "/ptfi1ExcelList")
+	public String ptfi1ExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		List<PtfiDto> list = ptfiService.selectPtfi1List();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/ptfi1ExcelList";
+	}
+	
+	@RequestMapping(value = "/ptfi2ExcelList")
+	public String ptfi2ExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		
+		List<PtfiDto> list = ptfiService.selectPtfi2List();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/ptfi2ExcelList";
+	}
 }

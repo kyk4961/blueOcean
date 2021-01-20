@@ -27,7 +27,7 @@
 			#{item.PURPOSE},
 			#{item.PURPOSE_GU},
 			#{item.NATURE},
-			#{item.LAUNCH_DATE}
+			STR_TO_DATE( #{item.LAUNCH_DATE}, '%Y%m%d' )
 			)
 		</foreach>
 	</insert>
@@ -57,6 +57,24 @@
 		FROM
 			`FSHRBT_ENGN_HRSPW_DATA`
 		LIMIT #{limitStartNo}, #{pageSize}
+	]]>
+	</select>
+	
+	<select id="selectFehdList" resultType="FehdDto" >
+  	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `MAIN_KIND`,
+		    `MAIN_QTY`,
+		    `MCE_KW`,
+		    `MCE_PS`,
+		    `GROSS_TONNAGE`,
+		    `PURPOSE`,
+		    `PURPOSE_GU`,
+		    `NATURE`,
+		    `LAUNCH_DATE`
+		FROM
+			`FSHRBT_ENGN_HRSPW_DATA`
 	]]>
 	</select>
 	

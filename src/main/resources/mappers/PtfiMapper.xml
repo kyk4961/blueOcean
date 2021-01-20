@@ -60,6 +60,25 @@
 	]]> 
     </select>
     
+    <select id="selectPtfi1List" resultType="PtfiDto" >
+	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `SHIP_GUBUN`,
+		    `GROSS_TONNAGE`,
+		    `REG_LENGTH`,
+		    `REG_BREADTH`,
+		    `REG_DEPTH`,
+		    `NATURE`,
+		    `PURPOSE`,
+		    `PURPOSE_GU`,
+		    `REG_PORT`
+		FROM
+			`PRSEC_TRGET_FSHRBT_INFO1`
+		
+	]]> 
+    </select>
+    
     <delete id="deletePtfi1">
     <![CDATA[
 		DELETE FROM PRSEC_TRGET_FSHRBT_INFO1 WHERE IDX > 0
@@ -120,6 +139,25 @@
 		FROM
 			`PRSEC_TRGET_FSHRBT_INFO2`
 		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
+    
+    <select id="selectPtfi2List" resultType="PtfiDto">
+	<![CDATA[
+		SELECT 
+			`IDX`,
+		    `SHIP_GUBUN`,
+		    `GROSS_TONNAGE`,
+		    `REG_LENGTH`,
+		    `REG_BREADTH`,
+		    `REG_DEPTH`,
+		    `NATURE`,
+		    `PURPOSE`,
+		    `PURPOSE_GU`,
+		    `REG_PORT`
+		FROM
+			`PRSEC_TRGET_FSHRBT_INFO2`
+		
 	]]> 
     </select>
     

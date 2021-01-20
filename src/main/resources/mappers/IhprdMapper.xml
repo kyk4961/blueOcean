@@ -57,6 +57,24 @@
 	]]> 
     </select>
     
+    <select id="selectIhprd1List" resultType="Ihprd1Dto" >
+	<![CDATA[
+		SELECT
+			IDX,
+			CMPTNC_BROFFI_NM, 
+			RUTE_NM,
+			RUTE_SCTN_NO, 
+			RUTE_SCTN_NM, 
+			MAX_FLOOD_DIR, 
+			MAX_FLOOD_RATE, 
+			MIN_FLOOD_DIR,
+			MIN_FLOOD_RATE
+		FROM
+			`INNER_HARBOR_PSNSHIP_RUTE_DATA1`
+		
+	]]> 
+    </select>
+    
     <delete id="deleteIhprd1">
     <![CDATA[
 		DELETE FROM INNER_HARBOR_PSNSHIP_RUTE_DATA1 WHERE IDX > 0
@@ -121,6 +139,25 @@
 	]]> 
     </select>
     
+    <select id="selectIhprd2List" resultType="Ihprd2Dto">
+	<![CDATA[
+		SELECT
+			IDX,
+			CMPTNC_BROFFI_NM, 
+			RUTE_NM, 
+			RUTE_SCTN_NO, 
+			TIDE_PORTCL_NO, 
+			TIDE_PORTCL_NM, 
+			TIDE_SYNDC, 
+			TIDE_FLQM, 
+			TIDE_STRD_PORTCL, 
+			TIDE_TIME_DIFF
+		FROM
+			`INNER_HARBOR_PSNSHIP_RUTE_DATA2`
+		
+	]]> 
+    </select>
+    
     <delete id="deleteIhprd2">
     <![CDATA[
 		DELETE FROM INNER_HARBOR_PSNSHIP_RUTE_DATA2 WHERE IDX > 0
@@ -179,6 +216,24 @@
 		FROM
 			`INNER_HARBOR_PSNSHIP_RUTE_DATA3`
 		LIMIT #{limitStartNo}, #{pageSize}
+	]]> 
+    </select>
+    
+    <select id="selectIhprd3List" resultType="Ihprd3Dto" >
+	<![CDATA[
+		SELECT
+			IDX,
+			CMPTNC_BROFFI_NM, 
+			RUTE_NM, 
+			RUTE_CODE, 
+			RUTE_SCTN_NO, 
+			RUTE_SCTN_NM, 
+			SAIL_VSL_NO, 
+			SAIL_VSL_KND, 
+			SAIL_VSL_PHOTO_NM
+		FROM
+			`INNER_HARBOR_PSNSHIP_RUTE_DATA3`
+		
 	]]> 
     </select>
     

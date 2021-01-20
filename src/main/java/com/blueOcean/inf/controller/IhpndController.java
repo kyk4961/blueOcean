@@ -32,4 +32,13 @@ public class IhpndController {
 
 		return "page/ihpndList";
 	}
+	
+	@RequestMapping(value = "/ihpndExcelList")
+	public String ihpndExcelList(Model model, @RequestParam(defaultValue = "1") int page) throws Exception {
+		List<IhpndDto> list = ihpndService.selectIhpndList();
+
+		model.addAttribute("list", list);
+
+		return "page/excel/ihpndExcelList";
+	}
 }

@@ -51,6 +51,10 @@
 					    	<input type="hidden" name="excelType" value="ihprd3">
 					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
 					    </form>
+					    <form action="/ihprd3ExcelList" method="POST" id="download">
+					    	<button type="button" onclick="download()">내려받기</button>
+					    </form>
+					    
 					    
 						<div class="block-content collapse in" style="overflow-x: scroll;">
 							<div class="" style="width: max-content;">
@@ -84,7 +88,7 @@
 												<td>${list.RUTE_SCTN_NM}</td>
 												<td>${list.SAIL_VSL_NO}</td>
 												<td>${list.SAIL_VSL_KND}</td>
-												<td>${list.NVGT_CHRT_PHOTO_NM}</td>
+												<td>${list.SAIL_VSL_PHOTO_NM}</td>
 											</tr>
 										</c:forEach>
 
@@ -122,6 +126,11 @@
         	if(confirm('데이터를 초기화 하시겠습니까?')){
         		$('#clear').submit();
         	}
+        }
+        
+        function download(){
+        	$('#download').submit();
+        	
         }
         
         </script>
