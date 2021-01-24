@@ -47,14 +47,16 @@
                            	<input type="file" name="file">
 					      	<button type="button" onclick="frmSubmit()">전송</button>
 					    </form>
-					    <form action="/dataClear" method="POST" id="clear">
-					    	<input type="hidden" name="excelType" value="ihprd3">
+					    <div>
 					    	<button type="button" onclick="dataclear()">데이터 초기화</button>
-					    </form>
-					    <form action="/ihprd3ExcelList" method="POST" id="download">
 					    	<button type="button" onclick="download()">내려받기</button>
-					    </form>
 					    
+						    <form action="/dataClear" method="POST" id="clear">
+						    	<input type="hidden" name="excelType" value="ihprd3">
+						    </form>
+						    <form action="/ihprd3ExcelList" method="POST" id="download">
+						    </form>
+					    </div>
 					    
 						<div class="block-content collapse in" style="overflow-x: scroll;">
 							<div class="" style="width: max-content;">
